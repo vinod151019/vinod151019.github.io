@@ -1,838 +1,823 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Satya Vinod Kantipudi</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Satya Vinod Kantipudi — AWS Solutions Architect · AI/ML &amp; Generative AI</title>
+<meta name="description" content="Satya Vinod Kantipudi — AWS Solutions Architect specializing in AI/ML, Generative AI, and Agentic AI. 8x AWS Certified. Helping startups and ISVs build production-grade AI on AWS." />
+<meta name="author" content="Satya Vinod Kantipudi" />
+<meta property="og:title" content="Satya Vinod Kantipudi — AWS Solutions Architect · AI/ML &amp; Generative AI" />
+<meta property="og:description" content="AWS Solutions Architect specializing in AI/ML, Generative AI & Agentic AI. 8x AWS Certified. Building production-grade agentic systems on AWS." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+  :root{
+    --bg:#070b12;
+    --bg-2:#0b111c;
+    --surface:rgba(255,255,255,.04);
+    --surface-2:rgba(255,255,255,.06);
+    --border:rgba(255,255,255,.09);
+    --text:#e9eef5;
+    --muted:#93a1b5;
+    --faint:#5f6d80;
+    --orange:#ff9900;
+    --orange-2:#ffb84d;
+    --cyan:#22d3ee;
+    --blue:#4d9fff;
+    --violet:#a78bfa;
+    --grad:linear-gradient(120deg,#ff9900,#ff5e7e 45%,#a78bfa 80%);
+    --grad-cool:linear-gradient(120deg,#22d3ee,#4d9fff 60%,#a78bfa);
+    --shadow:0 20px 50px -20px rgba(0,0,0,.6);
+    --r:18px;
+    --maxw:1120px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.65;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.font-display{font-family:'Space Grotesk',sans-serif;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%}
+  ::selection{background:rgba(255,153,0,.3)}
 
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-	<link rel="shortcut icon" href="favicon.ico">
+  .bg-orbs{position:fixed;inset:0;z-index:-2;overflow:hidden}
+  .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35}
+  .orb.a{width:520px;height:520px;background:radial-gradient(circle,#ff990055,transparent 70%);top:-120px;right:-80px}
+  .orb.b{width:480px;height:480px;background:radial-gradient(circle,#4d9fff44,transparent 70%);top:40%;left:-140px}
+  .orb.c{width:420px;height:420px;background:radial-gradient(circle,#a78bfa3d,transparent 70%);bottom:-100px;right:10%}
+  .bg-grid{position:fixed;inset:0;z-index:-1;
+    background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+    background-size:56px 56px;
+    mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 40%,transparent 100%);
+  }
 
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css">
-	<!-- Flaticons  -->
-	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170291156-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.3s}
+  nav .inner{
+    max-width:var(--maxw);margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  nav.scrolled{background:rgba(7,11,18,.75);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+  .logo{font-family:'Space Grotesk';font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:10px}
+  .logo .mark{width:34px;height:34px;border-radius:9px;background:var(--grad);display:grid;place-items:center;color:#0b0b0b;font-weight:700;box-shadow:0 6px 18px -6px #ff990088}
+  .nav-links{display:flex;gap:6px;align-items:center}
+  .nav-links a{padding:8px 14px;border-radius:10px;color:var(--muted);font-size:.9rem;font-weight:500;transition:.2s}
+  .nav-links a:hover{color:var(--text);background:var(--surface)}
+  .nav-cta{background:var(--grad);color:#0b0b0b !important;font-weight:600 !important}
+  .nav-cta:hover{filter:brightness(1.08)}
+  .burger{display:none;background:none;border:1px solid var(--border);color:var(--text);width:42px;height:42px;border-radius:10px;font-size:1.1rem;cursor:pointer}
 
-	  gtag('config', 'UA-170291156-1');
-	</script>
+  header.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:120px 0 80px}
+  .badge{display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border:1px solid var(--border);
+    border-radius:100px;background:var(--surface);font-size:.82rem;color:var(--muted);margin-bottom:26px}
+  .badge .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px #22c55e33;animation:pulse 2s infinite}
+  @keyframes pulse{50%{box-shadow:0 0 0 7px #22c55e11}}
+  .hero h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.02;font-weight:700;margin-bottom:10px}
+  .hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .role{font-size:clamp(1.1rem,2.6vw,1.6rem);color:var(--text);font-weight:500;margin-bottom:22px;min-height:1.5em}
+  .hero .role .typed{color:var(--orange-2);font-weight:600}
+  .hero .cursor{display:inline-block;width:2px;height:1.1em;background:var(--orange);margin-left:2px;vertical-align:-2px;animation:blink 1s step-end infinite}
+  @keyframes blink{50%{opacity:0}}
+  .hero p.lead{max-width:640px;color:var(--muted);font-size:1.08rem;margin-bottom:34px}
+  .hero .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:12px;font-weight:600;font-size:.95rem;transition:.25s;cursor:pointer;border:1px solid transparent}
+  .btn-primary{background:var(--grad);color:#0b0b0b;box-shadow:0 12px 30px -12px #ff990099}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px -12px #ff9900bb}
+  .btn-ghost{background:var(--surface);border:1px solid var(--border);color:var(--text)}
+  .btn-ghost:hover{background:var(--surface-2);transform:translateY(-2px)}
+  .socials{display:flex;gap:12px;margin-top:34px}
+  .socials a{width:46px;height:46px;border-radius:12px;border:1px solid var(--border);background:var(--surface);
+    display:grid;place-items:center;color:var(--muted);font-size:1.15rem;transition:.25s}
+  .socials a:hover{color:var(--text);border-color:var(--orange);transform:translateY(-3px);box-shadow:0 10px 24px -12px #ff990066}
 
-	</head>
-	<body>
-	<div id="colorlib-page">
-		<div class="container-wrap">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-			<div class="text-center">
-				<div class="author-img" style="background-image: url(images/about_1.jpg);"></div>
-				<h1 id="colorlib-logo"><a href="index.html">Satya Vinod Kantipudi</a></h1>
-				<span class="position"><a href="#">Data Engineer</a></span>
-			</div>
-			<nav id="colorlib-main-menu" role="navigation" class="navbar">
-				<div id="navbar" class="collapse">
-					<ul>
-						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
-						<li><a href="#" data-nav-section="about">About</a></li>
-						<li><a href="#" data-nav-section="services">Interests</a></li>
-						<li><a href="#" data-nav-section="skills">Skills</a></li>
-						<li><a href="#" data-nav-section="education">Education</a></li>
-						<li><a href="#" data-nav-section="experience">Experience</a></li>
-						<li><a href="#" data-nav-section="certifications">Certifications</a></li>
-						<li><a href="#" data-nav-section="work">Projects</a></li>
-						<li><a href="#" data-nav-section="achievements">Achievements</a></li>
-						<li><a href="#" data-nav-section="blog">Blog</a></li>
-						<li><a href="#" data-nav-section="contact">Contact</a></li>
-					</ul>
-				</div>
-			</nav>
+  .stats{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-2)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;padding:44px 24px}
+  .stat{text-align:center}
+  .stat .num{font-family:'Space Grotesk';font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;
+    background:var(--grad-cool);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+  .stat .lbl{color:var(--muted);font-size:.85rem;margin-top:8px}
 
-			<div class="colorlib-footer">
-				<ul>
-					<li><a href="https://github.com/vinod151019" target="_blank"><i class="icon-github"></i></a></li>
-					<li><a href="https://www.linkedin.com/in/svk1510/" target="_blank"><i class="icon-linkedin2"></i></a></li>
-					<li><a href="https://medium.com/@vinodkantipudi1510" target="_blank"><i class="fa fa-medium" aria-hidden="true"></i></i></a></li>
+  section{padding:92px 0;position:relative}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--orange-2);font-weight:600;font-size:.82rem;
+    text-transform:uppercase;letter-spacing:.14em;margin-bottom:14px}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--orange);border-radius:2px}
+  h2.section-title{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;margin-bottom:16px;line-height:1.1}
+  .section-intro{color:var(--muted);max-width:640px;margin-bottom:52px;font-size:1.05rem}
 
-					
-				</ul>
+  .about-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;align-items:start}
+  .about-grid p{color:var(--muted);margin-bottom:18px}
+  .about-grid p strong{color:var(--text);font-weight:600}
+  .about-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:26px}
+  .about-card h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:var(--faint);margin-bottom:18px}
+  .fact{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--border)}
+  .fact:last-child{border-bottom:none}
+  .fact i{color:var(--orange);width:20px;text-align:center;margin-top:4px}
+  .fact .k{font-size:.78rem;color:var(--faint)}
+  .fact .v{font-weight:500;font-size:.95rem}
 
-			</div>
+  .grid{display:grid;gap:22px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:28px;transition:.28s;position:relative;overflow:hidden}
+  .card::before{content:"";position:absolute;inset:0;border-radius:var(--r);padding:1px;
+    background:linear-gradient(120deg,transparent,rgba(255,153,0,.5),transparent);
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;
+    opacity:0;transition:.3s}
+  .card:hover{transform:translateY(-5px);background:var(--surface-2);box-shadow:var(--shadow)}
+  .card:hover::before{opacity:1}
+  .card .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:18px;
+    background:linear-gradient(135deg,rgba(255,153,0,.16),rgba(77,159,255,.16));color:var(--orange-2);border:1px solid var(--border)}
+  .card h3{font-size:1.2rem;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:.94rem}
+  .card .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+  .tag{font-size:.74rem;padding:4px 10px;border-radius:100px;background:rgba(255,255,255,.05);border:1px solid var(--border);color:var(--muted)}
 
-		</aside>
+  .eng{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:26px;transition:.28s}
+  .eng:hover{background:var(--surface-2);transform:translateY(-3px);box-shadow:var(--shadow)}
+  .eng .badge-co{width:56px;height:56px;border-radius:14px;display:grid;place-items:center;font-size:1.4rem;
+    color:#0b0b0b;background:var(--grad-cool)}
+  .eng h3{font-size:1.12rem;margin-bottom:3px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .eng .pill{font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:3px 9px;border-radius:100px;
+    background:rgba(34,211,238,.12);color:var(--cyan);border:1px solid rgba(34,211,238,.25)}
+  .eng .pill.win{background:rgba(34,197,94,.12);color:#4ade80;border-color:rgba(34,197,94,.25)}
+  .eng .sub{color:var(--faint);font-size:.82rem;margin-bottom:10px}
+  .eng p{color:var(--muted);font-size:.93rem}
+  .eng .tags{margin-top:14px}
 
-		<div id="colorlib-main">
+  .lead-feature{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:0;
+    border-radius:var(--r);overflow:hidden;border:1px solid var(--border);background:var(--surface)}
+  .lead-feature .side{padding:38px;background:linear-gradient(150deg,rgba(255,153,0,.14),rgba(167,139,250,.1))}
+  .lead-feature .side .big{font-family:'Space Grotesk';font-size:3.4rem;font-weight:700;line-height:1;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead-feature .side .big span{font-size:1.2rem;vertical-align:top}
+  .lead-feature .side p{color:var(--text);font-weight:500;margin-top:10px}
+  .lead-feature .side small{color:var(--muted)}
+  .lead-feature .body{padding:38px}
+  .lead-feature .body h3{font-size:1.3rem;margin-bottom:12px}
+  .lead-feature .body p{color:var(--muted);font-size:.95rem}
 
-			<section id="colorlib-hero" class="js-fullheight" data-section="home" >
-				<a href="#welcome">
-				<div class="flexslider js-fullheight">
-					<ul class="slides">
-				   	<li>
-				   		<div class="overlay"></div>
-				   		<div class="container-fluid">
-				   			<div class="row">
-					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-					   				<div class="slider-text-inner js-fullheight">
-					   					<div class="desc">
-											
-											<br><br><br><br><br>
-											
-											<h1>Hi! <br>I'm Satya </h1>
-											<h3>I'm <span class="typed-words"></span></h3>
-											<p><a href="SatyaVinodKantipudideiResume.pdf" target="_blank" download class="btn btn-primary btn-learn">Download CV <i class="icon-download4"></i></a></p>
-											
-											<canvas id="canvas"></canvas>
-											
+  .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .skill-cat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:26px}
+  .skill-cat h4{display:flex;align-items:center;gap:11px;font-size:1.05rem;margin-bottom:18px}
+  .skill-cat h4 i{color:var(--orange);width:22px;text-align:center}
+  .chips{display:flex;flex-wrap:wrap;gap:9px}
+  .chip{font-size:.82rem;padding:7px 13px;border-radius:10px;background:rgba(255,255,255,.045);
+    border:1px solid var(--border);color:var(--text);transition:.2s}
+  .chip:hover{border-color:var(--orange);color:var(--orange-2);transform:translateY(-2px)}
 
-											</div>
-					   				</div>
-					   			</div>
-					   		</div>
-				   		</div>
-				   		
+  .proj{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:26px;transition:.28s;display:flex;flex-direction:column}
+  .proj:hover{transform:translateY(-5px);background:var(--surface-2);box-shadow:var(--shadow)}
+  .proj .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+  .proj .emoji{font-size:1.7rem}
+  .proj .links{display:flex;gap:12px;color:var(--faint)}
+  .proj .links a:hover{color:var(--orange)}
+  .proj h3{font-size:1.12rem;margin-bottom:9px}
+  .proj p{color:var(--muted);font-size:.9rem;flex:1}
+  .proj .tags{margin-top:16px}
 
-				   	</li>
-				   
-				  	</ul>
-				  	</div>
-					  <hr style="width:90%;text-align:center; height: 0.5px;background-color:black;margin-left:10;padding: 0" ></a>
-			</section>
+  .timeline{position:relative;max-width:820px}
+  .timeline::before{content:"";position:absolute;left:20px;top:8px;bottom:8px;width:2px;
+    background:linear-gradient(#ff9900,#4d9fff,transparent)}
+  .tl-item{position:relative;padding-left:62px;padding-bottom:40px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-dot{position:absolute;left:11px;top:4px;width:20px;height:20px;border-radius:50%;
+    background:var(--bg);border:3px solid var(--orange);box-shadow:0 0 0 5px rgba(255,153,0,.12)}
+  .tl-item .when{font-size:.8rem;color:var(--orange-2);font-weight:600;margin-bottom:5px}
+  .tl-item h3{font-size:1.18rem;margin-bottom:3px}
+  .tl-item .org{color:var(--muted);font-size:.92rem;margin-bottom:12px}
+  .tl-item ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .tl-item ul li{color:var(--muted);font-size:.93rem;padding-left:20px;position:relative}
+  .tl-item ul li::before{content:"▹";position:absolute;left:0;color:var(--orange)}
 
-			<section class="colorlib-about" data-section="about" id="welcome">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="col-md-12">
-									<div class="about-desc">
-										<span class="heading-meta">Who Am I?</span>
-										<h2 class="colorlib-heading">Who Am I?</h2>
-										<p><strong>Greetings! My name is Satya Vinod Kantipudi, and I am currently pursuing a Master's degree in Business Analytics at the University of Texas, Dallas. My passion lies in Data Engineering, Big Data Analytics, and Cloud Technologies. As a highly adaptable and flexible individual, I am actively seeking a full-time opportunity in Data Engineering where I can utilize my experience, technical proficiency, and problem-solving abilities to develop data pipelines tailored to the business requirements of the organization and contribute to the betterment of society.</p>
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .edu-item{padding:18px 0;border-bottom:1px solid var(--border);display:flex;gap:16px}
+  .edu-item:last-child{border-bottom:none}
+  .edu-item .yr{font-size:.78rem;color:var(--faint);white-space:nowrap;padding-top:3px;min-width:78px}
+  .edu-item h4{font-size:1.02rem}
+  .edu-item .meta{color:var(--muted);font-size:.88rem}
+  .cert{display:flex;align-items:center;gap:14px;padding:15px 18px;border:1px solid var(--border);
+    border-radius:14px;background:var(--surface);margin-bottom:13px;transition:.2s}
+  .cert:hover{border-color:var(--orange);transform:translateX(4px)}
+  .cert i{font-size:1.4rem;color:var(--orange);width:28px;text-align:center}
+  .cert .t{font-weight:600;font-size:.95rem}
+  .cert .i{color:var(--faint);font-size:.8rem}
 
-										<p>Possessing a creative and visionary mindset, I excel at ideating innovative solutions that can be beneficial in various aspects of life. Tackling challenges and problem-solving are activities I truly enjoy, and my strong teamwork acumen and communication skills enable me to effectively collaborate with diverse groups of people.</p>
+  .blog{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:24px;transition:.28s;display:block;height:100%}
+  .blog:hover{transform:translateY(-5px);background:var(--surface-2);box-shadow:var(--shadow)}
+  .blog .cat{font-size:.74rem;color:var(--cyan);font-weight:600;text-transform:uppercase;letter-spacing:.1em}
+  .blog h3{font-size:1.05rem;margin:10px 0}
+  .blog p{color:var(--muted);font-size:.88rem}
+  .blog .more{color:var(--orange-2);font-size:.85rem;font-weight:600;margin-top:14px;display:inline-flex;gap:7px;align-items:center}
 
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+  .contact{text-align:center}
+  .contact .box{background:linear-gradient(150deg,rgba(255,153,0,.1),rgba(77,159,255,.08));
+    border:1px solid var(--border);border-radius:26px;padding:60px 32px}
+  .contact h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:16px}
+  .contact p{color:var(--muted);max-width:520px;margin:0 auto 32px;font-size:1.05rem}
 
-			<section class="colorlib-services" data-section="services">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Interests</span>
-							<h2 class="colorlib-heading">Interests</h2>
-						</div>
-					</div>
-					<div class="row row-pt-md">
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-1">
-								<span class="icon">
-									<i class="icon-bulb"></i>
-								</span>
-								<div class="desc">
-									<h3>Problem Solving</h3>
-									
-								</div>
-							</div>
-						</div>
-						
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-3">
-								<span class="icon">
-									<i class="fa fa-newspaper-o" aria-hidden="true"></i>
-								</span>
-								<div class="desc">
-									<h3>Data Engineering</h3>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-4">
-								<span class="icon">
-									<i class="fa fa-cloud"></i>
-								</span>
-								<div class="desc">
-									<h3>Cloud</h3>
-								</div>
-							</div>
-						</div>
-						
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-5">
-								<span class="icon">
-									<i class="fa fa-book" aria-hidden="true"></i>
-								</span>
-								<div class="desc">
-									<h3>Big Data</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<div id="colorlib-counter" class="colorlib-counters" style="background-image: url(images/cover_bg_1.jpg);" data-stellar-background-ratio="0.5">
-				<div class="overlay"></div>
-				<div class="colorlib-narrow-content">
-					<div class="row">
-					</div>
-					<div class="row">
-						<div class="col-md-4 text-center animate-box">
-							<span class="colorlib-counter js-counter" data-from="0" data-to="6" data-speed="2500" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Projects</span>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<span class="colorlib-counter js-counter" data-from="0" data-to="1" data-speed="2500" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Internship</span>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<span class="colorlib-counter js-counter" data-from="0" data-to="3" data-speed="2500" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Organizations</span>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-			
-			<section class="colorlib-skills" data-section="skills" >
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						
-							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="col-md-12">
-									<div class="about-desc">
-										<span class="heading-meta">Skills</span>
-										<h2 class="colorlib-heading">Skills</h2>
-										<p>
-											<ul id="list">
-												<li><strong>Programming:</strong> Python, R, SQL</li>
-												<li><strong>Big Data Technologies:</strong> Spark, Hadoop, Hive, Kafka, HBase, Cassandra</li>
-												<li><strong>Databases:</strong> MySQL, MS SQL-Server, Postgres SQL</li>
-												<li><strong>Cloud:</strong>  AWS (S3, Lambda, Athena, IAM, RDS, Glue, Step Functions, API Gateway, Data Migration Service, Redshift, Quick Sight)</li>
-												<li><strong>Tools & Frameworks:</strong> Apache Airflow, Apache Hudi</li>
-												<li><strong>Soft Skills:</strong> Problem solving, Communication, Collaboration, Attention to detail</li>
-											</ul>
-										</p>
-									</div>
-								</div>
-							</div>
-						
-					</div>
-				</div>
-			</section>
-			<!-- <section class="colorlib-skills" data-section="skills">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12" data-animate-effect="fadeInLeft"><span class="heading-meta">Skills</span> 
-							<h2 class="colorlib-heading animate-box">Skills</h2>
-							<li><strong>Programming:</strong> Java, Python, JavaScript, C, PHP, Scala</li>
-							<li><strong>Web Technologies:</strong> ReactJS, AngularJS, ExpressJS, NodeJS, HTML, CSS, Bootstrap</li>
-						</div>
-					</div>
-				</div>
-			</section> --> 
+  footer{border-top:1px solid var(--border);padding:34px 0;text-align:center;color:var(--faint);font-size:.86rem}
+  footer .socials{justify-content:center;margin-top:18px}
 
-			<section class="colorlib-education" data-section="education">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Education</span>
-							<h2 class="colorlib-heading animate-box">Education</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<div class="fancy-collapse-panel">
-								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-									
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingFive">
-									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Masters<span> 2022-2024</span>
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-									        <div class="panel-body">
-									            <p><strong>Masters in Business Analytics<br>University of Texas at Dallas<br>GPA: 3.95/4</strong></p>	
-									        </div>
-									    </div>
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingTwo">
-									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Bachelor of Technology <span>2017-2021</span>
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-									        <div class="panel-body">
-									            <p><strong> Bachelor of Technology in Mechanical Engineering<br> Amrita School of Engineering, Coimbatore<br>GPA: 3.3/4</strong></p>
-													
-									        </div>
-									    </div>
-									</div>
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingThree">
-									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">XII (Senior Secondary)<span> 2015-2017</span>
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-									        <div class="panel-body">
-									            <p><strong>XII (Higher Secondary) <br>Sri Chaitanya Junior College, Vijayawada<br>Score: 93.2%</strong></p>
-									        </div>
-									    </div>
-									</div>
+  .reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
 
-									
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+  @media(max-width:900px){
+    .about-grid,.two-col{grid-template-columns:1fr;gap:32px}
+    .g3,.skills-grid{grid-template-columns:1fr 1fr}
+    .lead-feature{grid-template-columns:1fr}
+    .stats .wrap{grid-template-columns:repeat(3,1fr);gap:28px 16px}
+  }
+  @media(max-width:640px){
+    .nav-links{position:fixed;top:70px;right:16px;left:16px;flex-direction:column;align-items:stretch;
+      background:rgba(11,17,28,.97);backdrop-filter:blur(14px);border:1px solid var(--border);border-radius:16px;
+      padding:12px;gap:4px;transform:translateY(-14px);opacity:0;pointer-events:none;transition:.25s}
+    .nav-links.open{transform:none;opacity:1;pointer-events:auto}
+    .burger{display:block}
+    .g3,.g2,.skills-grid{grid-template-columns:1fr}
+    .stats .wrap{grid-template-columns:repeat(2,1fr)}
+    .eng{grid-template-columns:1fr}
+    section{padding:70px 0}
+  }
+</style>
+</head>
+<body>
 
-			<section class="colorlib-experience" data-section="experience">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Experience</span>
-							<h2 class="colorlib-heading animate-box">Work Experience</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-				         <div class="timeline-centered">
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-1">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2><a href="#">Data Engineer Intern at Center For Brain Health</a> <span>Feb 2023 - Sep 2023</span></h2>
-					                  <p>
-					                  	<ul>
-					                  		<strong>Project: The Brain Health </strong>
-					                  		<li>Maintaining optimal brain health is a crucial aspect of one's overall well-being. Recent research has shown that cognitive decline is largely preventable, and adopting healthier brain habits can enhance and extend cognitive function. The Center for BrainHealth, a nonprofit research institute affiliated with the University of Texas at Dallas, is committed to advancing the understanding of brain health and seeks to equip individuals with the knowledge and resources necessary to actively care for their brains and enhance their cognitive abilities.</li>
-					                  		<strong>As a Data Engineer at Center for Brain Health: </strong>
-					                  		<li>Architected and deployed Amazon RDS PostgreSQL database to manage analytics data, achieving enhanced query performance and ensuring high availability.</li>
-					                  		<li>Migrated 50TB of data from Amazon RDS to Amazon S3 using DMS, reducing migration time from Hours to 20 minutes.</li>
-					                  		<li>Designed and implemented 15+ scalable ETL jobs leveraging Apache Spark, transforming data across 100+ tables from S3 raw zone to refined zone in batch mode.</li>
-									<li>Achieved a 20% reduction in storage cost by implementing a Lakehouse architecture on AWS, enhancing data processing speed.</li>
-									<li>Improved query performance in Amazon Redshift by up to 75% by implementing complex CTEs to optimize complex multi-table joins. This resulted in a 2x reduction of query run times by preprocessing and filtering data before the main query execution.</li>
-									<li>Collaborated with cross-functional teams to create over 10 interactive Key Performance Indicators (KPIs) reports in Amazon Quicksight, providing actionable insights to product managers and stakeholders.</li>
-					                  		
+<div class="bg-orbs"><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div></div>
+<div class="bg-grid"></div>
 
-					                  	</ul>
-					                  </p>
-					               </div>
-					            </div>
-					         </article>
-					         
-					         
+<nav id="nav">
+  <div class="inner">
+    <a href="#home" class="logo"><span class="mark">SV</span> Satya Vinod</a>
+    <div class="nav-links" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#focus">What I Do</a>
+      <a href="#impact">Impact</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact" class="nav-cta">Let's Talk</a>
+    </div>
+    <button class="burger" id="burger"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
 
-					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-none">
-					               </div>
-					            </div>
-					         </article>
-					      </div>
-					   </div>
-				   </div>
-				</div>
-			</section>
-			<section class="colorlib-experience" data-section="experience">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Organizations</span>
-							<h2 class="colorlib-heading animate-box">Positions of responsibility</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-				         <div class="timeline-centered">
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-					            <div class="timeline-entry-inner">
+<header class="hero" id="home">
+  <div class="wrap">
+    <div class="reveal in">
+      <span class="badge"><span class="dot"></span> AWS Solutions Architect · AI/ML · Generative &amp; Agentic AI</span>
+      <h1>Hi, I'm Satya <span class="grad">Vinod Kantipudi</span></h1>
+      <div class="role">I help companies <span class="typed"></span><span class="cursor"></span></div>
+      <p class="lead">
+        Solutions Architect at Amazon Web Services and an <strong style="color:var(--text)">8&times; AWS Certified</strong>
+        specialist in <strong style="color:var(--text)">AI/ML, Generative AI, and Agentic AI</strong>. I partner with
+        startups and ISVs to take AI from prototype to production on AWS — designing agentic systems, RAG platforms,
+        and model-customization pipelines that actually ship.
+      </p>
+      <div class="cta-row">
+        <a href="#impact" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> See my impact</a>
+        <a href="SatyaVinodKantipudideiResume.pdf" target="_blank" class="btn btn-ghost"><i class="fa-solid fa-download"></i> Résumé</a>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/svk1510/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/vinod151019" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://medium.com/@vinodkantipudi1510" target="_blank" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
+      </div>
+    </div>
+  </div>
+</header>
 
-					               <div class="timeline-icon color-1">
-					                  <i class="icon-pen2"></i>
-					               </div>
+<div class="stats">
+  <div class="wrap">
+    <div class="stat reveal"><div class="num" data-count="8" data-suffix="×">0</div><div class="lbl">AWS Certifications</div></div>
+    <div class="stat reveal"><div class="num" data-count="215" data-suffix="+">0</div><div class="lbl">SA engagements logged</div></div>
+    <div class="stat reveal"><div class="num" data-count="40" data-suffix="+">0</div><div class="lbl">Startups &amp; ISVs supported</div></div>
+    <div class="stat reveal"><div class="num" data-count="431">0</div><div class="lbl">Live workshop attendees</div></div>
+    <div class="stat reveal"><div class="num" data-count="123">0</div><div class="lbl">Model-tuning experiments</div></div>
+  </div>
+</div>
 
-					               <div class="timeline-label">
-					                  <h2><a href="#">Member at UTD AWS organization</a> <span>Nov 2022 - Aug 2023</span></h2>
-					                  <p>
-					                  	<ul>
-					                  		<li>Led a team of 8 student volunteers to organize AWS workshops on big data analytics using S3, Glue and Athena for 50+ attendees</li>
-					                  		<li>Conducted 20+ interview preparation workshops for AWS roles, helping students build confidence through practice sessions</li>
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="eyebrow">Who I am</span>
+        <h2 class="section-title">Building production AI on AWS</h2>
+        <p>
+          I'm an <strong>AWS Solutions Architect</strong> whose core expertise is <strong>AI/ML, Generative AI,
+          and Agentic AI</strong>. I work day-to-day with founders, CTOs, and engineering teams to design and ship
+          intelligent systems on AWS — agentic applications on Amazon Bedrock &amp; AgentCore, retrieval-augmented
+          generation, and custom-tuned models.
+        </p>
+        <p>
+          I started as a <strong>data engineer</strong> building large-scale ETL and lakehouse pipelines — a
+          foundation that now makes me effective at the full AI lifecycle: <strong>data preparation, fine-tuning
+          and evaluation, agent orchestration, guardrails, and deployment</strong>. I've run 100+ SageMaker
+          fine-tuning experiments, co-owned the security layer of an open-source agent framework, and taken
+          agentic-AI demos to global AWS Summit stages.
+        </p>
+        <p>
+          I'm <strong>8&times; AWS Certified</strong> and hands-on by default — whether that's unblocking a
+          throttled Bedrock workload, architecting a multi-tenant RAG search platform, or squeezing measurable
+          accuracy gains out of a small language model.
+        </p>
+      </div>
+      <div class="about-card reveal">
+        <h4>At a glance</h4>
+        <div class="fact"><i class="fa-solid fa-briefcase"></i><div><div class="k">Role</div><div class="v">Solutions Architect, AWS</div></div></div>
+        <div class="fact"><i class="fa-solid fa-robot"></i><div><div class="k">Core expertise</div><div class="v">AI/ML · Generative AI · Agentic AI</div></div></div>
+        <div class="fact"><i class="fa-solid fa-certificate"></i><div><div class="k">Credentials</div><div class="v">8&times; AWS Certified</div></div></div>
+        <div class="fact"><i class="fa-solid fa-users-gear"></i><div><div class="k">Segment</div><div class="v">Startups &amp; ISVs</div></div></div>
+        <div class="fact"><i class="fa-solid fa-graduation-cap"></i><div><div class="k">Education</div><div class="v">MS Business Analytics, UT Dallas</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-					                  	</ul></p>
-					               </div>
-					            </div>
-					         </article>
+<section id="focus">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">What I do</span>
+      <h2 class="section-title">AI-first solutions architecture</h2>
+      <p class="section-intro">My work centers on AI/ML and generative AI, backed by strong cloud and data foundations.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card reveal">
+        <div class="ic"><i class="fa-solid fa-robot"></i></div>
+        <h3>Generative &amp; Agentic AI</h3>
+        <p>Designing production agentic systems on Amazon Bedrock &amp; AgentCore — multi-agent orchestration, tool use, guardrails, and secure, observable deployments.</p>
+        <div class="tags"><span class="tag">Bedrock</span><span class="tag">AgentCore</span><span class="tag">Strands</span><span class="tag">MCP</span><span class="tag">Nova · Claude</span></div>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><i class="fa-solid fa-brain"></i></div>
+        <h3>AI/ML &amp; Model Customization</h3>
+        <p>Fine-tuning and evaluating models end to end — SFT, LoRA/QLoRA, and DPO on Amazon SageMaker &amp; Bedrock, with data prep, failure taxonomies, and self-healing pipelines.</p>
+        <div class="tags"><span class="tag">SageMaker</span><span class="tag">Fine-tuning</span><span class="tag">LoRA · DPO</span><span class="tag">Evaluation</span></div>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h3>RAG &amp; Knowledge Systems</h3>
+        <p>Multi-tenant retrieval-augmented generation on Amazon OpenSearch &amp; Bedrock Knowledge Bases — permissions-aware search, metadata filtering, and ML-powered ranking.</p>
+        <div class="tags"><span class="tag">OpenSearch</span><span class="tag">Knowledge Bases</span><span class="tag">Vector Search</span></div>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><i class="fa-solid fa-arrows-turn-to-dots"></i></div>
+        <h3>Migration &amp; Modernization</h3>
+        <p>Moving workloads to AWS and modernizing them — VMware exits, containers on EKS, database migrations to Aurora, and Graviton adoption for price-performance.</p>
+        <div class="tags"><span class="tag">VMware → AWS</span><span class="tag">EKS</span><span class="tag">Aurora</span><span class="tag">Graviton</span></div>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><i class="fa-solid fa-database"></i></div>
+        <h3>Data &amp; Analytics</h3>
+        <p>Lakehouse and pipeline architectures that feed AI — S3 + Glue + Athena, Redshift, and streaming — turning raw data into query-ready, model-ready assets.</p>
+        <div class="tags"><span class="tag">Glue</span><span class="tag">Athena</span><span class="tag">Redshift</span><span class="tag">QuickSight</span></div>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Cost, Security &amp; Resilience</h3>
+        <p>Well-Architected reviews across the board — right-sizing &amp; Savings Plans, WAF/Shield &amp; IAM/Cognito, and resilience programs, backups, and multi-region designs.</p>
+        <div class="tags"><span class="tag">Well-Architected</span><span class="tag">WAF · Shield</span><span class="tag">Savings Plans</span><span class="tag">Resilience</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-3">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2><a href="#">Finance Assistant for ANOKHA</a> <span>Jan 2018 - Feb 2020</span></h2>
-					                  <p>
-					                  	<ul>
-					                  		<li>Worked as a Asistant for Finance Committee at Amrita University.</li>
-					                  		<li>Audited over 30,000 pay transactions with a 95% accuracy rate and Completed 10,000 disbursements and collections with no loss of funds.</li>
-					                  		
-					                  	</ul>
-					                  </p>
-					               </div>
-					            </div>
-					         </article>
-					         
+<section id="impact">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Selected impact</span>
+      <h2 class="section-title">Engagements that shipped</h2>
+      <p class="section-intro">A sample of customer work in my current role — described by industry and outcome (customer identities kept confidential).</p>
+    </div>
+    <div class="grid g2">
 
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-2">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2><a href="#">Volunteer Head for Nature Club</a> <span>Sep 2017 - Jun 2021</span></h2>
-					                  <p>
-					                  	<ul>
-					                  		<li>Worked as a Volunteer Head for Nature Club at Amrita University.</li>
-					                  		<li>Conduct Several 20+ events across Coimbatore to help the frontline workers.</li>
-					                  		<li>Mobilized and trained a team of 8 volunteers for periodic invasive plant removal drives near by Ettimadai village areas. Restored 3 acres over 6 months as a part of Swachh Bharat Mission.</li>
-					                  		
-					                  	</ul>
-					                  </p>
-					               </div>
-					            </div>
-					         </article>
-					         
+      <div class="eng reveal">
+        <div class="badge-co"><i class="fa-solid fa-utensils"></i></div>
+        <div>
+          <h3>Food-Tech Platform <span class="pill">Migration &amp; Resilience</span></h3>
+          <div class="sub">Multi-workstream account</div>
+          <p>Guided a VMware-to-AWS migration, EKS blue/green cluster upgrades, and an Amazon Connect contact-center migration. Drove a security-enhancement initiative (Audit Manager, Patch Manager), a Customer Resilience Program, AWS Backup integration, and RabbitMQ federation on Amazon MQ.</p>
+          <div class="tags"><span class="tag">VMware</span><span class="tag">EKS</span><span class="tag">Amazon Connect</span><span class="tag">Audit Manager</span><span class="tag">Amazon MQ</span></div>
+        </div>
+      </div>
 
-					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-none">
-					               </div>
-					            </div>
-					         </article>
-					      </div>
-					   </div>
-				   </div>
-				</div>
-			</section>
-			<section class="colorlib-certifications" data-section="certifications">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="col-md-12">
-									<div class="about-desc">
-										<span class="heading-meta"> Global Certifications</span>
-										<h2 class="colorlib-heading">Certifications</h2>
-										<p><ul>
-											<li>Graduate Certificate in Machine Learning - by University of Texas at Dallas (02/2024)</li>
-											<li>AWS Solutions Architect Associate - by Amazon Web Services (01/2024)</li>
-											<li>Data Warehouse Fundamentals - by Udemy (08/2023)</li>
-											<li>AWS Certified Cloud Practitioner - by Amazon Web Services (11/2022)</li>
-											
-										</ul>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="colorlib-work" data-section="work">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Projects</span>
-							<h2 class="colorlib-heading animate-box"> Projects</h2>
-						</div>
-					</div>
-					<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-						
-					</div>
-					<div class="row">
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/youtube.jpg);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="https://github.com/vinod151019/aws_etl_pipeline_on_youtube_data" target="_blank">AWS ETL Pipele on YouTube Data</a></h3>
-										<h3><a href="https://github.com/vinod151019/aws_etl_pipeline_on_youtube_data" target="_blank">Project Code</a></h3>
-										<span>An Simple End-to-End Data Engineering Project using the YouTube dataset and by utilizing tools like Aamazon Web Services (AWS) </span>
-									</div>
-								</div>
-							</div>
-						</div>
+      <div class="eng reveal">
+        <div class="badge-co"><i class="fa-solid fa-helmet-safety"></i></div>
+        <div>
+          <h3>Connected-Worker SaaS <span class="pill">GenAI · RAG</span></h3>
+          <div class="sub">Manufacturing software ISV</div>
+          <p>Led technical roadmap planning and architecture reviews for a production-grade, multi-tenant natural-language search &amp; RAG platform on Amazon OpenSearch — designing permissions-aware search, metadata filtering, ML-powered ranking, and multi-tool agent orchestration with AgentCore.</p>
+          <div class="tags"><span class="tag">OpenSearch</span><span class="tag">AgentCore</span><span class="tag">RAG</span><span class="tag">Multi-tenancy</span></div>
+        </div>
+      </div>
 
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/newyork.jpg);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="https://github.com/vinod151019/Big-data-Analytics-using-New-York-Dataset" target="_blank"> Analysis of Property Value Dynamics in New York City</a></h3>
-										<h3><a href="https://github.com/vinod151019/Big-data-Analytics-using-New-York-Dataset" target="_blank">Project Code</a></h3>
-										<span>Analysis of the factors contributing to changes in property sales with respect to crime rates in New York City by utilizing Python, Spark, Tableau</span>
-									</div>
-								</div>
-							</div>
-						</div>
+      <div class="eng reveal">
+        <div class="badge-co"><i class="fa-solid fa-gauge-high"></i></div>
+        <div>
+          <h3>Consumer-Electronics SaaS <span class="pill win">AWS-Native Win</span></h3>
+          <div class="sub">Observability modernization</div>
+          <p>Led a CIO-level observability deep-dive and won an AWS-native stack — Amazon Managed Prometheus + Managed Grafana + CloudWatch + X-Ray — over third-party APM tools. Follow-on work added multi-region redundancy and a migration from a third-party LLM to Amazon Bedrock.</p>
+          <div class="tags"><span class="tag">AMP + AMG</span><span class="tag">CloudWatch</span><span class="tag">X-Ray</span><span class="tag">Bedrock</span></div>
+        </div>
+      </div>
 
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
-							<div class="project" style="background-image: url(images/movies.jpg);">
-								<div class="desc">
-									<div class="con">
-										<br><br>
-										<h3><a href="https://github.com/vinod151019/Build_an_ETL_Pipeline_with_DBT_Snowflake_and_Airflow" target="_blank">Build an ETL Pipeline with DBT Snowflake and Airflow</a></h3>
-										<h3><a href="https://github.com/vinod151019/Build_an_ETL_Pipeline_with_DBT_Snowflake_and_Airflow" target="_blank">Project Code</a></h3>
-										<span>Here we aim to create a seamless flow for extracting, transforming, and loading data. Furthermore, to ensure efficient monitoring of each pipeline run, we will incorporate Slack and email notifications using SNS (Simple Notification Service).
+      <div class="eng reveal">
+        <div class="badge-co"><i class="fa-solid fa-cart-shopping"></i></div>
+        <div>
+          <h3>High-Volume E-Commerce <span class="pill">Security</span></h3>
+          <div class="sub">Platform at billions of requests/mo</div>
+          <p>Architected a WAF + Shield Advanced + Bot Control solution with ML-based detection of pattern-evading payment-fraud bots, centralized via Firewall Manager across multiple accounts — displacing an incumbent CDN. Also drove CloudFront migration and a Graviton4 / C7a Kubernetes migration.</p>
+          <div class="tags"><span class="tag">WAF · Shield</span><span class="tag">Bot Control</span><span class="tag">CloudFront</span><span class="tag">Graviton4</span></div>
+        </div>
+      </div>
 
-</span>
-									</div>
-								</div>
-							</div>
-						</div>
+      <div class="eng reveal">
+        <div class="badge-co"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <div>
+          <h3>Tax-Software ISV <span class="pill win">Launched</span></h3>
+          <div class="sub">Regulated / US data-residency</div>
+          <p>Root-caused a critical Bedrock throttling blocker — right-sizing max-tokens improved concurrent capacity 3–4× and unblocked production. Advised on prompt caching, model right-sizing (Haiku/Sonnet), and Knowledge Bases for a shared developer assistant, all within strict compliance constraints.</p>
+          <div class="tags"><span class="tag">Bedrock</span><span class="tag">Prompt Caching</span><span class="tag">Knowledge Bases</span></div>
+        </div>
+      </div>
 
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/gearbox.jpg);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="https://github.com/vinod151019/Machine-Learning-model-for-Fault-Diagnosis-using-Support-Vector-Machine" target="_blank">Machine Learning Based Fault Diagnosis on Automotive GearBox</a></h3>
-										<h3><a href="https://github.com/vinod151019/Machine-Learning-model-for-Fault-Diagnosis-using-Support-Vector-Machine" target="_blank">Project Code</a></h3>
-										<span> The project focuses on using machine learning techniques to diagnose faults in automotive gearboxes. By analyzing sensor data and patterns, it aims to accurately identify and classify potential issues, enabling timely maintenance and preventing further damage.</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-					
-						
-						
-					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box">
-							<p><a href="https://github.com/vinod151019" target="_blank" class="btn btn-primary btn-lg btn-load-more">Load more <i class="icon-reload"></i></a></p>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<section class="colorlib-achievements" data-section="achievements">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="col-md-12">
-									<div class="about-desc">
-										<span class="heading-meta">Achievements</span>
-										<h2 class="colorlib-heading">Achievements</h2>
-										<p><ul>
-											<li>SQL 5 Star in Hacker Rank</li>
-											<li>Deans Excellence Scholarship at UTD</li>
+      <div class="eng reveal">
+        <div class="badge-co"><i class="fa-solid fa-heart-pulse"></i></div>
+        <div>
+          <h3>HealthTech &amp; Observability ISVs <span class="pill">Data &amp; Cost</span></h3>
+          <div class="sub">Multiple accounts</div>
+          <p>Built a JSON analytics pipeline on S3 + Glue + Athena (with a resilience exercise) for a HealthTech ISV, and root-caused a stuck AWS Backup configuration for a network-observability ISV that had kept daily costs flat — setting a clear path to stabilized savings.</p>
+          <div class="tags"><span class="tag">S3 · Glue · Athena</span><span class="tag">AWS Backup</span><span class="tag">Resilience</span></div>
+        </div>
+      </div>
 
-										</ul>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			
-			<section class="colorlib-blog" data-section="blog">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Read</span>
-							<h2 class="colorlib-heading"> Blog</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="blog-entry">
-								<a href="https://medium.com/@vinodkantipudi1510/using-a-postgresql-database-as-an-aws-dms-source-a-comprehensive-guide-to-enabling-cdc-9e7b887f7d05" target="_blank" class="blog-img"><img src="images/blog1.jpg" class="img-responsive" ></a>
-								<div class="desc">
-									<span><small>Spetember, 2023 </small> </span>
-									<h3><a href="https://medium.com/@vinodkantipudi1510/using-a-postgresql-database-as-an-aws-dms-source-a-comprehensive-guide-to-enabling-cdc-9e7b887f7d05" target="_blank">Using a PostgreSQL Database as an AWS DMS Source: A Comprehensive Guide to Enabling CDC</a></h3>
-									<p>An article which focuses on how to enable CDC when using DMS.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="blog-entry">
-								<a href="https://medium.com/@vinodkantipudi1510/introduction-to-transaction-data-lakes-cf6f576d78fa" target="_blank" class="blog-img"><img src="images/blog2.jpg" class="img-responsive" ></a>
-								<div class="desc">
-									<span><small>September, 2023 </small> </span>
-									<h3><a href="https://medium.com/@vinodkantipudi1510/introduction-to-transaction-data-lakes-cf6f576d78fa" target="_blank">Introduction to Transactional Data Lakes</a></h3>
-									<p>An article which mainly discuss about the transactional data lakes and benefits of using it.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="blog-entry">
-								<a href="https://medium.com/@vinodkantipudi1510/comparison-of-different-data-lake-formats-i-e-apache-iceberg-apache-hudi-and-delta-lake-defd2cde5a1" class="blog-img" target="_blank"><img src="images/blog3.jpg" class="img-responsive" ></a>
-								<div class="desc">
-									<span><small>September, 2023 </small></span>
-									<h3><a href="https://medium.com/@vinodkantipudi1510/comparison-of-different-data-lake-formats-i-e-apache-iceberg-apache-hudi-and-delta-lake-defd2cde5a1" class="blog-img" target="_blank">Comparison of different data lake formats i.e. Apache Iceberg, Apache Hudi, and Delta Lake</a></h3>
-									<p>An Article which mainly discuss differnt data lake formats and their advantages and disadvantages</p>
-								</div>
-							</div>
-						</div>
-						
-					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box">
-							<p><a href="https://medium.com/@vinodkantipudi1510" class="btn btn-primary btn-lg btn-load-more">Load more <i class="icon-reload"></i></a></p>
-						</div>
-					</div>
-				</div>
-			</section>
+    </div>
+  </div>
+</section>
 
-			<section class="colorlib-contact" data-section="contact">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Contact</span>
-							<h2 class="colorlib-heading">Get in Touch</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-5">
-							<div class="row">
-							
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-mail"></i>
-								</div>
-								<div class="colorlib-text">
-									<p><a href="mailto: vinodkantipudi1510@gmail.com">vinodkantipudi1510@gmail.com</a></p>
-								</div>
-							</div>
+<section id="leadership">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Thought leadership &amp; community</span>
+      <h2 class="section-title">Teaching, speaking &amp; building in the open</h2>
+      <p class="section-intro">Beyond customer accounts, I invest in enablement, public speaking, and open-source — helping others build with agentic AI on AWS.</p>
+    </div>
+    <div class="grid g3">
 
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-globe-outline"></i>
-								</div>
-								<div class="colorlib-text">
-									<p><a>(972) 836-6556</a></p>
-								</div>
-							</div>
-							
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-map"></i>
-								</div>
-								<div class="colorlib-text">
-									<p><a >Dallas, Texas </a></p>
-								</div>
-							</div>
+      <div class="lead-feature reveal">
+        <div class="side">
+          <div class="big">431</div>
+          <p>live attendees</p>
+          <small>Moderated a high-impact Amazon Nova Agent Building Session — one of my largest live technical audiences.</small>
+        </div>
+        <div class="body">
+          <h3>SignalScout PV on the global AWS Summit stage</h3>
+          <p>
+            I designed and built <strong>SignalScout PV</strong>, a multi-agent pharmacovigilance system on Amazon
+            Bedrock AgentCore + Strands, that ingests FDA adverse-event data, runs statistical disproportionality
+            analysis, and generates evidence-backed safety-signal packets with clinical validation. It was a featured
+            demo in the <strong>Agents for Business</strong> track at <strong>AWS Summit London, LA, and NYC</strong> —
+            drawing <strong>270+ badge scans</strong> and a <strong>4.71/5 event CSAT</strong>, among the highest engagement on the demo towers.
+          </p>
+        </div>
+      </div>
 
-							
+      <div class="card reveal">
+        <div class="ic"><i class="fa-brands fa-github"></i></div>
+        <h3>Open-source Agentic AI Framework</h3>
+        <p>Co-owned the <strong>Security layer</strong> of a six-layer reference framework for production agents on AgentCore — Cognito JWT + Cedar policies (ENFORCE) + Bedrock Guardrails via the Gateway. Shipped with <strong>zero AppSec findings</strong> and open-sourced on aws-samples.</p>
+        <div class="tags"><span class="tag">Cedar</span><span class="tag">Cognito</span><span class="tag">Guardrails</span><span class="tag">Open Source</span></div>
+      </div>
 
-							
+      <div class="card reveal">
+        <div class="ic"><i class="fa-solid fa-flask-vial"></i></div>
+        <h3>ISV Model Customization Lab</h3>
+        <p>Co-delivered SA enablement on fine-tuning small language models on AWS. Ran <strong>123 SageMaker experiments</strong>, achieving a <strong>43% relative accuracy lift</strong> on medical benchmarks (42.7% → 61.3%) with SFT + Online DPO on Qwen 3 4B.</p>
+        <div class="tags"><span class="tag">SageMaker</span><span class="tag">LoRA/QLoRA</span><span class="tag">DPO</span></div>
+      </div>
 
-						</div>
-						</div>
-						
-					</div>
-				</div>
-			</section>
+      <div class="card reveal">
+        <div class="ic"><i class="fa-solid fa-chalkboard-user"></i></div>
+        <h3>Workshops &amp; Game Days</h3>
+        <p>Led and co-facilitated Agentic AI Game Days and university workshops for enterprise teams and students — building &amp; deploying agents with Bedrock, AgentCore, Strands, MCP, and Kiro. Consistently strong CSAT and NPS across sessions.</p>
+        <div class="tags"><span class="tag">AgentCore</span><span class="tag">Kiro</span><span class="tag">MCP</span><span class="tag">Immersion Days</span></div>
+      </div>
 
-		</div><!-- end:colorlib-main -->
-	</div><!-- end:container-wrap -->
-	</div><!-- end:colorlib-page -->
+      <div class="card reveal">
+        <div class="ic"><i class="fa-solid fa-microphone-lines"></i></div>
+        <h3>Public Speaking &amp; Enablement</h3>
+        <p>Delivered "Accelerate AI Agents from Prototype to Production" (Bedrock AgentCore), immersion days on GenAI &amp; Amazon Q Developer, and an internal AI-cademy RAG deep-dive (4.54/5 satisfaction).</p>
+        <div class="tags"><span class="tag">Bedrock</span><span class="tag">Q Developer</span><span class="tag">RAG</span></div>
+      </div>
 
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
-	<!-- Owl carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- Counters -->
-	<script src="js/jquery.countTo.js"></script>
-	
-	
-	<!-- MAIN JS -->
-	<script src="js/main.js"></script>
-	<script src="js/typed.js"></script>
-            <script>
-            var typed = new Typed('.typed-words', {
-            strings: ["a Data Engineer"," a Technophile"," a Business Analytics Student"],
-            typeSpeed: 80,
-            backSpeed: 80,
-            backDelay: 1000,
-            startDelay: 1000,
-            loop: true,
-            showCursor: true
-            });
+      <div class="card reveal">
+        <div class="ic"><i class="fa-solid fa-hands-helping"></i></div>
+        <h3>Mentoring &amp; Giving Back</h3>
+        <p>Mentored an SA intern through their builder phases, served as a Tech U Demo Day evaluator, judged a university hackathon (100+ students), and organized community volunteering with Ronald McDonald House Charities.</p>
+        <div class="tags"><span class="tag">Mentorship</span><span class="tag">Tech U</span><span class="tag">Hackathons</span></div>
+      </div>
 
+    </div>
+  </div>
+</section>
 
-			let resizeReset = function() {
-				w = canvasBody.width = window.innerWidth;
-				h = canvasBody.height = window.innerHeight;
-			}
+<section id="skills">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Toolbox</span>
+      <h2 class="section-title">Skills &amp; technologies</h2>
+      <p class="section-intro">The stack I architect, build, and advise on — AI/ML first.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-cat reveal">
+        <h4><i class="fa-solid fa-robot"></i> Generative &amp; Agentic AI</h4>
+        <div class="chips">
+          <span class="chip">Amazon Bedrock</span><span class="chip">Bedrock AgentCore</span><span class="chip">Strands Agents</span>
+          <span class="chip">Amazon Nova</span><span class="chip">Anthropic Claude</span><span class="chip">Knowledge Bases</span>
+          <span class="chip">OpenSearch (RAG)</span><span class="chip">MCP</span><span class="chip">Bedrock Guardrails</span>
+          <span class="chip">Multi-agent orchestration</span>
+        </div>
+      </div>
+      <div class="skill-cat reveal">
+        <h4><i class="fa-solid fa-brain"></i> AI/ML &amp; Model Customization</h4>
+        <div class="chips">
+          <span class="chip">Amazon SageMaker</span><span class="chip">Fine-tuning (SFT)</span><span class="chip">LoRA / QLoRA</span>
+          <span class="chip">DPO / RLHF</span><span class="chip">Model evaluation</span><span class="chip">SLMs</span>
+          <span class="chip">PyTorch</span><span class="chip">Hugging Face</span><span class="chip">Python</span>
+        </div>
+      </div>
+      <div class="skill-cat reveal">
+        <h4><i class="fa-solid fa-database"></i> Data &amp; Analytics</h4>
+        <div class="chips">
+          <span class="chip">AWS Glue</span><span class="chip">Athena</span><span class="chip">Redshift</span>
+          <span class="chip">EMR</span><span class="chip">Kinesis</span><span class="chip">QuickSight</span>
+          <span class="chip">DMS</span><span class="chip">Apache Spark</span><span class="chip">Airflow</span>
+          <span class="chip">Iceberg · Hudi · Delta</span><span class="chip">SQL</span>
+        </div>
+      </div>
+      <div class="skill-cat reveal">
+        <h4><i class="fa-solid fa-cloud"></i> Cloud, Security &amp; Ops</h4>
+        <div class="chips">
+          <span class="chip">EC2 · Graviton</span><span class="chip">EKS · ECS</span><span class="chip">Lambda</span>
+          <span class="chip">Aurora · RDS</span><span class="chip">IAM · Cognito</span><span class="chip">WAF · Shield</span>
+          <span class="chip">Cedar Policies</span><span class="chip">CloudWatch · X-Ray</span><span class="chip">CDK · CloudFormation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-			const opts = { 
-				particleColor: "rgb(44,152,240)",
-				lineColor: "rgb(44,152,240)",
-				particleAmount: 20,
-				defaultSpeed: 0.8,
-				variantSpeed: 1,
-				defaultRadius: 2,
-				variantRadius: 2,
-				linkRadius: 200,
-			};
+<section id="projects">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Signature projects</span>
+      <h2 class="section-title">Things I've built</h2>
+      <p class="section-intro">Hands-on builds — from agentic AI systems to model fine-tuning and data pipelines.</p>
+    </div>
+    <div class="grid g3">
 
-			window.addEventListener("resize", function(){
-				deBouncer();
-			});
+      <div class="proj reveal">
+        <div class="top"><span class="emoji">🧬</span></div>
+        <h3>SignalScout PV</h3>
+        <p>Multi-agent pharmacovigilance system on Bedrock AgentCore + Strands — ingests FDA adverse-event data, runs disproportionality analysis, and generates clinically-validated safety-signal packets. Featured at three AWS Summits.</p>
+        <div class="tags"><span class="tag">AgentCore</span><span class="tag">Strands</span><span class="tag">Healthcare AI</span></div>
+      </div>
 
-			let deBouncer = function() {
-				clearTimeout(tid);
-				tid = setTimeout(function() {
-					resizeReset();
-				}, delay);
-			};
+      <div class="proj reveal">
+        <div class="top"><span class="emoji">🧩</span><div class="links"><a href="https://github.com/aws-samples/sample-pluggable-agentic-ai-framework" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></div></div>
+        <h3>Pluggable Agentic AI Framework</h3>
+        <p>Open-source six-layer reference framework for production agents on AWS. I co-owned the security layer — Cognito + Cedar + Guardrails through the AgentCore Gateway — shipped with zero AppSec findings.</p>
+        <div class="tags"><span class="tag">AgentCore</span><span class="tag">Security</span><span class="tag">Open Source</span></div>
+      </div>
 
-			let checkDistance = function(x1, y1, x2, y2){ 
-				return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-			};
+      <div class="proj reveal">
+        <div class="top"><span class="emoji">🩺</span></div>
+        <h3>Medical SLM Fine-Tuning</h3>
+        <p>Reproducible recipes for fine-tuning small language models (BioMistral, Qwen 3) for medical reasoning on SageMaker — SFT + DPO pipelines with a validated failure taxonomy and self-healing patterns; 43% accuracy lift.</p>
+        <div class="tags"><span class="tag">SageMaker</span><span class="tag">DPO</span><span class="tag">SLM</span></div>
+      </div>
 
-			let linkPoints = function(point1, hubs){ 
-				for (let i = 0; i < hubs.length; i++) {
-					let distance = checkDistance(point1.x, point1.y, hubs[i].x, hubs[i].y);
-					let opacity = 1 - distance / opts.linkRadius;
-					if (opacity > 0) { 
-						drawArea.lineWidth = 0.5;
-						drawArea.strokeStyle = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${opacity})`;
-						drawArea.beginPath();
-						drawArea.moveTo(point1.x, point1.y);
-						drawArea.lineTo(hubs[i].x, hubs[i].y);
-						drawArea.closePath();
-						drawArea.stroke();
-					}
-				}
-			}
+      <div class="proj reveal">
+        <div class="top"><span class="emoji">🌾</span></div>
+        <h3>CropWhisper</h3>
+        <p>Generative-AI advisory app for agriculture built with a CDK-deployed serverless backend and Amazon Bedrock — an end-to-end example of a spec-driven, well-architected GenAI product.</p>
+        <div class="tags"><span class="tag">Bedrock</span><span class="tag">CDK</span><span class="tag">Serverless</span></div>
+      </div>
 
-			Particle = function(xPos, yPos){ 
-				this.x = Math.random() * w; 
-				this.y = Math.random() * h;
-				this.speed = opts.defaultSpeed + Math.random() * opts.variantSpeed; 
-				this.directionAngle = Math.floor(Math.random() * 360); 
-				this.color = opts.particleColor;
-				this.radius = opts.defaultRadius + Math.random() * opts. variantRadius; 
-				this.vector = {
-					x: Math.cos(this.directionAngle) * this.speed,
-					y: Math.sin(this.directionAngle) * this.speed
-				};
-				this.update = function(){ 
-					this.border(); 
-					this.x += this.vector.x; 
-					this.y += this.vector.y; 
-				};
-				this.border = function(){ 
-					if (this.x >= w || this.x <= 0) { 
-						this.vector.x *= -1;
-					}
-					if (this.y >= h || this.y <= 0) {
-						this.vector.y *= -1;
-					}
-					if (this.x > w) this.x = w;
-					if (this.y > h) this.y = h;
-					if (this.x < 0) this.x = 0;
-					if (this.y < 0) this.y = 0;	
-				};
-				this.draw = function(){ 
-					drawArea.beginPath();
-					drawArea.arc(this.x, this.y, this.radius, 0, Math.PI*2);
-					drawArea.closePath();
-					drawArea.fillStyle = this.color;
-					drawArea.fill();
-				};
-			};
+      <div class="proj reveal">
+        <div class="top"><span class="emoji">🏥</span></div>
+        <h3>Healthcare Data Lake</h3>
+        <p>End-to-end healthcare lakehouse on AWS — S3 raw/curated zones, Glue crawlers &amp; ETL, and Athena queries — with an executive walkthrough of the architecture and console flow.</p>
+        <div class="tags"><span class="tag">S3</span><span class="tag">Glue</span><span class="tag">Athena</span></div>
+      </div>
 
-			function setup(){ 
-				particles = [];
-				resizeReset();
-				for (let i = 0; i < opts.particleAmount; i++){
-					particles.push( new Particle() );
-				}
-				window.requestAnimationFrame(loop);
-			}
+      <div class="proj reveal">
+        <div class="top"><span class="emoji">📊</span><div class="links"><a href="https://github.com/vinod151019/aws_etl_pipeline_on_youtube_data" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></div></div>
+        <h3>AWS ETL Data Pipeline</h3>
+        <p>End-to-end data-engineering pipeline on AWS — S3, Glue, Athena, and Lambda — cataloging and analyzing semi-structured data for BI-ready insights.</p>
+        <div class="tags"><span class="tag">Glue</span><span class="tag">Athena</span><span class="tag">Lambda</span></div>
+      </div>
 
-			function loop(){ 
-				window.requestAnimationFrame(loop);
-				drawArea.clearRect(0,0,w,h);
-				for (let i = 0; i < particles.length; i++){
-					particles[i].update();
-					particles[i].draw();
-				}
-				for (let i = 0; i < particles.length; i++){
-					linkPoints(particles[i], particles);
-				}
-			}
+    </div>
+    <div style="text-align:center;margin-top:36px" class="reveal">
+      <a href="https://github.com/vinod151019" target="_blank" class="btn btn-ghost"><i class="fa-brands fa-github"></i> More on GitHub</a>
+    </div>
+  </div>
+</section>
 
-			const canvasBody = document.getElementById("canvas"),
-			drawArea = canvasBody.getContext("2d");
-			let delay = 200, tid,
-			rgb = opts.lineColor.match(/\d+/g);
-			resizeReset();
-			setup();
-            </script>
-	</body>
+<section id="experience">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Journey</span>
+      <h2 class="section-title">Experience</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="when">2024 — Present</div>
+        <h3>Solutions Architect</h3>
+        <div class="org">Amazon Web Services · Startups &amp; ISVs</div>
+        <ul>
+          <li>Trusted technical advisor to 40+ startup and ISV accounts, logging 215+ engagements across architecture reviews, demos, immersion days, and roadmap planning.</li>
+          <li>Lead AI/ML, generative-AI &amp; agentic builds on Amazon Bedrock &amp; AgentCore — RAG platforms, multi-agent systems, and model-customization pipelines.</li>
+          <li>Took an agentic-AI demo (SignalScout PV) to AWS Summit London, LA &amp; NYC and moderated a 431-attendee Amazon Nova agent-building session.</li>
+          <li>Co-owned the security layer of an open-source AgentCore framework and delivered SA enablement on model customization (123 fine-tuning experiments).</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="when">Feb 2023 — Sep 2023</div>
+        <h3>Data Engineer Intern</h3>
+        <div class="org">Center for BrainHealth · The University of Texas at Dallas</div>
+        <ul>
+          <li>Migrated 50TB from Amazon RDS to Amazon S3 with DMS, cutting migration time from hours to ~20 minutes.</li>
+          <li>Built 15+ Apache Spark ETL jobs across 100+ tables from raw to refined zones in a lakehouse architecture — reducing storage cost ~20%.</li>
+          <li>Improved Amazon Redshift query performance up to 75% via optimized CTEs and preprocessing.</li>
+          <li>Delivered 10+ interactive QuickSight KPI dashboards for product managers and stakeholders.</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="when">2022 — 2023</div>
+        <h3>Member, UTD AWS Organization</h3>
+        <div class="org">University of Texas at Dallas</div>
+        <ul>
+          <li>Led 8 student volunteers to run AWS big-data workshops (S3, Glue, Athena) for 50+ attendees.</li>
+          <li>Ran 20+ interview-prep sessions for students pursuing AWS and cloud roles.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="reveal">
+        <span class="eyebrow">Education</span>
+        <h2 class="section-title" style="font-size:clamp(1.7rem,3.5vw,2.4rem)">Academics</h2>
+        <div class="edu-item">
+          <div class="yr">2022–2024</div>
+          <div><h4>M.S., Business Analytics</h4><div class="meta">University of Texas at Dallas · GPA 3.95/4.0</div></div>
+        </div>
+        <div class="edu-item">
+          <div class="yr">2024</div>
+          <div><h4>Graduate Certificate, Machine Learning</h4><div class="meta">University of Texas at Dallas</div></div>
+        </div>
+        <div class="edu-item">
+          <div class="yr">2017–2021</div>
+          <div><h4>B.Tech, Mechanical Engineering</h4><div class="meta">Amrita School of Engineering, Coimbatore · GPA 3.3/4.0</div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Credentials</span>
+        <h2 class="section-title" style="font-size:clamp(1.7rem,3.5vw,2.4rem)">8&times; AWS Certified</h2>
+        <p style="color:var(--muted);margin-bottom:22px;font-size:.95rem">Across foundational, associate, and specialty levels — including AI/ML and generative AI.</p>
+        <div class="cert"><i class="fa-brands fa-aws"></i><div><div class="t">AWS Certified Solutions Architect – Associate</div><div class="i">Amazon Web Services</div></div></div>
+        <div class="cert"><i class="fa-brands fa-aws"></i><div><div class="t">AWS Certified Generative AI Developer</div><div class="i">Amazon Web Services</div></div></div>
+        <div class="cert"><i class="fa-brands fa-aws"></i><div><div class="t">AWS Certified Cloud Practitioner</div><div class="i">Amazon Web Services</div></div></div>
+        <div class="cert" style="border-style:dashed"><i class="fa-solid fa-plus"></i><div><div class="t">+ 5 more AWS certifications</div><div class="i">Full list on LinkedIn &amp; Credly</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="writing">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Writing</span>
+      <h2 class="section-title">From the blog</h2>
+      <p class="section-intro">Deep-dives on data engineering and modern lakehouse architectures.</p>
+    </div>
+    <div class="grid g3">
+      <a class="blog reveal" href="https://medium.com/@vinodkantipudi1510/using-a-postgresql-database-as-an-aws-dms-source-a-comprehensive-guide-to-enabling-cdc-9e7b887f7d05" target="_blank">
+        <span class="cat">AWS · DMS</span>
+        <h3>PostgreSQL as an AWS DMS Source: Enabling CDC</h3>
+        <p>A comprehensive guide to configuring change data capture when using PostgreSQL with AWS Database Migration Service.</p>
+        <span class="more">Read on Medium <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      <a class="blog reveal" href="https://medium.com/@vinodkantipudi1510/introduction-to-transaction-data-lakes-cf6f576d78fa" target="_blank">
+        <span class="cat">Data Lakes</span>
+        <h3>Introduction to Transactional Data Lakes</h3>
+        <p>What transactional data lakes are, why ACID matters on the lake, and the benefits they bring to modern data platforms.</p>
+        <span class="more">Read on Medium <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      <a class="blog reveal" href="https://medium.com/@vinodkantipudi1510/comparison-of-different-data-lake-formats-i-e-apache-iceberg-apache-hudi-and-delta-lake-defd2cde5a1" target="_blank">
+        <span class="cat">Architecture</span>
+        <h3>Iceberg vs. Hudi vs. Delta Lake</h3>
+        <p>A side-by-side comparison of the leading open table formats — trade-offs, strengths, and when to choose each.</p>
+        <span class="more">Read on Medium <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="box reveal">
+      <span class="eyebrow" style="justify-content:center">Let's connect</span>
+      <h2>Building AI on AWS?</h2>
+      <p>Whether it's agentic AI, a RAG platform, model fine-tuning, or getting your cloud foundations right — I'm always happy to talk architecture. Reach out.</p>
+      <div class="cta-row" style="justify-content:center">
+        <a href="https://www.linkedin.com/in/svk1510/" target="_blank" class="btn btn-primary"><i class="fa-brands fa-linkedin-in"></i> Connect on LinkedIn</a>
+        <a href="https://github.com/vinod151019" target="_blank" class="btn btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="year"></span> Satya Vinod Kantipudi · Building AI on the cloud, one architecture at a time.</div>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/svk1510/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/vinod151019" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://medium.com/@vinodkantipudi1510" target="_blank" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const nav = document.getElementById('nav');
+  addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 30));
+
+  const burger = document.getElementById('burger');
+  const navlinks = document.getElementById('navlinks');
+  burger.addEventListener('click', () => navlinks.classList.toggle('open'));
+  navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navlinks.classList.remove('open')));
+
+  const roles = [
+    'build agentic AI on Amazon Bedrock & AgentCore.',
+    'ship production-grade Generative AI.',
+    'design AI/ML & RAG systems.',
+    'fine-tune & customize models on AWS.',
+    'migrate & modernize on AWS.'
+  ];
+  const typed = document.querySelector('.typed');
+  let ri = 0, ci = 0, deleting = false;
+  function tick(){
+    const word = roles[ri];
+    typed.textContent = word.slice(0, ci);
+    if(!deleting && ci < word.length){ ci++; setTimeout(tick, 45); }
+    else if(!deleting && ci === word.length){ deleting = true; setTimeout(tick, 1600); }
+    else if(deleting && ci > 0){ ci--; setTimeout(tick, 22); }
+    else { deleting = false; ri = (ri+1) % roles.length; setTimeout(tick, 300); }
+  }
+  tick();
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  function animateCount(el){
+    const target = +el.dataset.count;
+    const suffix = el.dataset.suffix || '';
+    const dur = 1600; const start = performance.now();
+    function step(now){
+      const p = Math.min((now - start)/dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased) + suffix;
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  const cio = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ animateCount(e.target); cio.unobserve(e.target); } });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.num[data-count]').forEach(el => cio.observe(el));
+</script>
+</body>
 </html>
-
