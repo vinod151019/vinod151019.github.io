@@ -3,16 +3,61 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Satya Vinod Kantipudi — AWS Solutions Architect · AI/ML &amp; Generative AI</title>
-<meta name="description" content="Satya Vinod Kantipudi — AWS Solutions Architect specializing in AI/ML, Generative AI, and Agentic AI. 8x AWS Certified. Helping startups and ISVs build production-grade AI on AWS." />
+<title>Satya Vinod Kantipudi — Technical Product Manager (AI/ML) · AWS Solutions Architect</title>
+<meta name="description" content="Satya Vinod Kantipudi — AWS Solutions Architect moving into Technical Product Management. I turn AI/ML capabilities into shipped products and measurable business outcomes: $635K+ influenced, 5+ products to production, 8x AWS Certified, MS Business Analytics." />
 <meta name="author" content="Satya Vinod Kantipudi" />
-<meta property="og:title" content="Satya Vinod Kantipudi — AWS Solutions Architect · AI/ML &amp; Generative AI" />
-<meta property="og:description" content="AWS Solutions Architect specializing in AI/ML, Generative AI & Agentic AI. 8x AWS Certified. Building production-grade agentic systems on AWS." />
+
+<!-- Canonical + theme -->
+<link rel="canonical" href="https://vinod151019.github.io/" />
+<meta name="theme-color" content="#070b12" />
+
+<!-- Open Graph (fixes the missing social-share card) -->
+<meta property="og:title" content="Satya Vinod Kantipudi — Technical Product Manager (AI/ML) · AWS Solutions Architect" />
+<meta property="og:description" content="Product-minded AWS Solutions Architect. I turn AI/ML capability into shipped products and business outcomes — $635K+ influenced, 5+ products to production, 8x AWS Certified." />
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://vinod151019.github.io/" />
+<meta property="og:image" content="https://vinod151019.github.io/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter / X card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Satya Vinod Kantipudi — Technical Product Manager (AI/ML) · AWS Solutions Architect" />
+<meta name="twitter:description" content="I turn AI/ML capability into shipped products and measurable business outcomes. $635K+ influenced · 5+ products to production · 8x AWS Certified." />
+<meta name="twitter:image" content="https://vinod151019.github.io/og-image.png" />
+
+<!-- Favicon (SVG provided in repo; modern browsers render it) -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<!-- Structured data: helps recruiters Googling your name surface THIS page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Satya Vinod Kantipudi",
+  "url": "https://vinod151019.github.io/",
+  "jobTitle": "Solutions Architect, AWS (transitioning to Technical Product Management)",
+  "worksFor": { "@type": "Organization", "name": "Amazon Web Services" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "The University of Texas at Dallas" }
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/svk1510/",
+    "https://github.com/vinod151019",
+    "https://medium.com/@vinodkantipudi1510"
+  ],
+  "knowsAbout": [
+    "Technical Product Management", "AI/ML Products", "Generative AI", "Agentic AI",
+    "Product Discovery", "Roadmapping", "Go-to-Market", "Amazon Bedrock", "RAG", "Cloud Architecture"
+  ]
+}
+</script>
+
 <style>
   :root{
     --bg:#070b12;
@@ -21,13 +66,14 @@
     --surface-2:rgba(255,255,255,.06);
     --border:rgba(255,255,255,.09);
     --text:#e9eef5;
-    --muted:#93a1b5;
-    --faint:#5f6d80;
+    --muted:#9aa8bd;          /* nudged lighter for WCAG AA on dark bg */
+    --faint:#7688a0;          /* nudged lighter for AA on small text */
     --orange:#ff9900;
     --orange-2:#ffb84d;
     --cyan:#22d3ee;
     --blue:#4d9fff;
     --violet:#a78bfa;
+    --green:#4ade80;
     --grad:linear-gradient(120deg,#ff9900,#ff5e7e 45%,#a78bfa 80%);
     --grad-cool:linear-gradient(120deg,#22d3ee,#4d9fff 60%,#a78bfa);
     --shadow:0 20px 50px -20px rgba(0,0,0,.6);
@@ -48,6 +94,11 @@
   a{color:inherit;text-decoration:none}
   img{max-width:100%}
   ::selection{background:rgba(255,153,0,.3)}
+
+  /* Accessibility: keyboard skip link */
+  .skip{position:absolute;left:-999px;top:0;background:var(--orange);color:#0b0b0b;padding:10px 16px;border-radius:0 0 10px 0;z-index:200;font-weight:600}
+  .skip:focus{left:0}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:6px}
 
   .bg-orbs{position:fixed;inset:0;z-index:-2;overflow:hidden}
   .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35}
@@ -88,7 +139,10 @@
   .hero .role .typed{color:var(--orange-2);font-weight:600}
   .hero .cursor{display:inline-block;width:2px;height:1.1em;background:var(--orange);margin-left:2px;vertical-align:-2px;animation:blink 1s step-end infinite}
   @keyframes blink{50%{opacity:0}}
-  .hero p.lead{max-width:640px;color:var(--muted);font-size:1.08rem;margin-bottom:34px}
+  .hero p.lead{max-width:660px;color:var(--muted);font-size:1.08rem;margin-bottom:20px}
+  .hero .looking{display:inline-flex;align-items:center;gap:10px;padding:9px 16px;border-radius:12px;margin-bottom:30px;
+    background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.28);color:var(--text);font-size:.92rem}
+  .hero .looking i{color:var(--green)}
   .hero .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
   .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:12px;font-weight:600;font-size:.95rem;transition:.25s;cursor:pointer;border:1px solid transparent}
   .btn-primary{background:var(--grad);color:#0b0b0b;box-shadow:0 12px 30px -12px #ff990099}
@@ -103,16 +157,16 @@
   .stats{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-2)}
   .stats .wrap{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;padding:44px 24px}
   .stat{text-align:center}
-  .stat .num{font-family:'Space Grotesk';font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;
+  .stat .num{font-family:'Space Grotesk';font-size:clamp(1.7rem,4vw,2.5rem);font-weight:700;
     background:var(--grad-cool);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
-  .stat .lbl{color:var(--muted);font-size:.85rem;margin-top:8px}
+  .stat .lbl{color:var(--muted);font-size:.82rem;margin-top:8px}
 
   section{padding:92px 0;position:relative}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--orange-2);font-weight:600;font-size:.82rem;
     text-transform:uppercase;letter-spacing:.14em;margin-bottom:14px}
   .eyebrow::before{content:"";width:26px;height:2px;background:var(--orange);border-radius:2px}
   h2.section-title{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;margin-bottom:16px;line-height:1.1}
-  .section-intro{color:var(--muted);max-width:640px;margin-bottom:52px;font-size:1.05rem}
+  .section-intro{color:var(--muted);max-width:660px;margin-bottom:52px;font-size:1.05rem}
 
   .about-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;align-items:start}
   .about-grid p{color:var(--muted);margin-bottom:18px}
@@ -124,6 +178,8 @@
   .fact i{color:var(--orange);width:20px;text-align:center;margin-top:4px}
   .fact .k{font-size:.78rem;color:var(--faint)}
   .fact .v{font-weight:500;font-size:.95rem}
+  .fact.hl{background:rgba(74,222,128,.06);border-radius:10px;padding:12px;margin:4px -6px;border-bottom:none}
+  .fact.hl i{color:var(--green)}
 
   .grid{display:grid;gap:22px}
   .g3{grid-template-columns:repeat(3,1fr)}
@@ -151,8 +207,11 @@
   .eng .pill{font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:3px 9px;border-radius:100px;
     background:rgba(34,211,238,.12);color:var(--cyan);border:1px solid rgba(34,211,238,.25)}
   .eng .pill.win{background:rgba(34,197,94,.12);color:#4ade80;border-color:rgba(34,197,94,.25)}
-  .eng .sub{color:var(--faint);font-size:.82rem;margin-bottom:10px}
+  .eng .sub{color:var(--faint);font-size:.82rem;margin-bottom:12px}
   .eng p{color:var(--muted);font-size:.93rem}
+  .eng .role-tag{font-size:.72rem;color:var(--orange-2);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+  .eng .outcome{display:block;margin-top:10px;color:var(--text);font-size:.9rem;padding-left:14px;border-left:2px solid var(--green)}
+  .eng .outcome b{color:var(--green);font-weight:600}
   .eng .tags{margin-top:14px}
 
   .lead-feature{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:0;
@@ -169,6 +228,7 @@
 
   .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
   .skill-cat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:26px}
+  .skill-cat.feature{border-color:rgba(255,153,0,.35);background:linear-gradient(160deg,rgba(255,153,0,.06),transparent)}
   .skill-cat h4{display:flex;align-items:center;gap:11px;font-size:1.05rem;margin-bottom:18px}
   .skill-cat h4 i{color:var(--orange);width:22px;text-align:center}
   .chips{display:flex;flex-wrap:wrap;gap:9px}
@@ -180,8 +240,10 @@
   .proj:hover{transform:translateY(-5px);background:var(--surface-2);box-shadow:var(--shadow)}
   .proj .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
   .proj .emoji{font-size:1.7rem}
-  .proj .links{display:flex;gap:12px;color:var(--faint)}
+  .proj .links{display:flex;gap:12px;color:var(--faint);font-size:.95rem}
+  .proj .links a{display:inline-flex;align-items:center;gap:5px}
   .proj .links a:hover{color:var(--orange)}
+  .proj .links .lbl{font-size:.78rem;font-weight:500}
   .proj h3{font-size:1.12rem;margin-bottom:9px}
   .proj p{color:var(--muted);font-size:.9rem;flex:1}
   .proj .tags{margin-top:16px}
@@ -199,6 +261,7 @@
   .tl-item ul{list-style:none;display:flex;flex-direction:column;gap:9px}
   .tl-item ul li{color:var(--muted);font-size:.93rem;padding-left:20px;position:relative}
   .tl-item ul li::before{content:"▹";position:absolute;left:0;color:var(--orange)}
+  .tl-item ul li strong{color:var(--text);font-weight:600}
 
   .two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px}
   .edu-item{padding:18px 0;border-bottom:1px solid var(--border);display:flex;gap:16px}
@@ -213,6 +276,13 @@
   .cert .t{font-weight:600;font-size:.95rem}
   .cert .i{color:var(--faint);font-size:.8rem}
 
+  /* Testimonial */
+  .quote{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:32px;position:relative}
+  .quote .mark{font-size:3rem;line-height:1;color:var(--orange);opacity:.5;font-family:'Space Grotesk'}
+  .quote p{color:var(--text);font-size:1.05rem;margin:6px 0 18px;font-style:italic}
+  .quote .by{color:var(--muted);font-size:.9rem}
+  .quote .by b{color:var(--text)}
+
   .blog{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:24px;transition:.28s;display:block;height:100%}
   .blog:hover{transform:translateY(-5px);background:var(--surface-2);box-shadow:var(--shadow)}
   .blog .cat{font-size:.74rem;color:var(--cyan);font-weight:600;text-transform:uppercase;letter-spacing:.1em}
@@ -224,13 +294,17 @@
   .contact .box{background:linear-gradient(150deg,rgba(255,153,0,.1),rgba(77,159,255,.08));
     border:1px solid var(--border);border-radius:26px;padding:60px 32px}
   .contact h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:16px}
-  .contact p{color:var(--muted);max-width:520px;margin:0 auto 32px;font-size:1.05rem}
+  .contact p{color:var(--muted);max-width:560px;margin:0 auto 32px;font-size:1.05rem}
 
   footer{border-top:1px solid var(--border);padding:34px 0;text-align:center;color:var(--faint);font-size:.86rem}
   footer .socials{justify-content:center;margin-top:18px}
 
   .reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    *{animation:none !important;scroll-behavior:auto}
+  }
 
   @media(max-width:900px){
     .about-grid,.two-col{grid-template-columns:1fr;gap:32px}
@@ -253,6 +327,8 @@
 </head>
 <body>
 
+<a href="#about" class="skip">Skip to content</a>
+
 <div class="bg-orbs"><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div></div>
 <div class="bg-grid"></div>
 
@@ -261,37 +337,44 @@
     <a href="#home" class="logo"><span class="mark">SV</span> Satya Vinod</a>
     <div class="nav-links" id="navlinks">
       <a href="#about">About</a>
-      <a href="#focus">What I Do</a>
+      <a href="#focus">Strengths</a>
       <a href="#impact">Impact</a>
       <a href="#leadership">Leadership</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#contact" class="nav-cta">Let's Talk</a>
     </div>
-    <button class="burger" id="burger"><i class="fa-solid fa-bars"></i></button>
+    <button class="burger" id="burger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
   </div>
 </nav>
 
 <header class="hero" id="home">
   <div class="wrap">
     <div class="reveal in">
-      <span class="badge"><span class="dot"></span> AWS Solutions Architect · AI/ML · Generative &amp; Agentic AI</span>
+      <span class="badge"><span class="dot"></span> AWS Solutions Architect · Technical Product Management · AI/ML</span>
       <h1>Hi, I'm Satya <span class="grad">Vinod Kantipudi</span></h1>
       <div class="role">I help companies <span class="typed"></span><span class="cursor"></span></div>
       <p class="lead">
-        Solutions Architect at Amazon Web Services and an <strong style="color:var(--text)">8&times; AWS Certified</strong>
-        specialist in <strong style="color:var(--text)">AI/ML, Generative AI, and Agentic AI</strong>. I partner with
-        startups and ISVs to take AI from prototype to production on AWS — designing agentic systems, RAG platforms,
-        and model-customization pipelines that actually ship.
+        I'm an <strong style="color:var(--text)">AWS Solutions Architect</strong> moving into
+        <strong style="color:var(--text)">Technical Product Management</strong>. I sit where the customer, the
+        business, and engineering meet — turning AI/ML capability into products that ship and move real numbers.
+        <strong style="color:var(--text)">8× AWS Certified</strong> with an <strong style="color:var(--text)">MS in
+        Business Analytics</strong>, I bring the technical depth to earn engineering's trust and the business fluency
+        to own outcomes.
       </p>
+      <div class="looking">
+        <i class="fa-solid fa-compass"></i>
+        <span><strong>Open to Technical Product Manager / Product Manager (AI/ML) roles.</strong></span>
+      </div>
       <div class="cta-row">
         <a href="#impact" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> See my impact</a>
-        <a href="SatyaVinodKantipudideiResume.pdf" target="_blank" class="btn btn-ghost"><i class="fa-solid fa-download"></i> Résumé</a>
+        <!-- download attr gives recruiters a clean filename even though the server file is unchanged -->
+        <a href="SatyaVinodKantipudideiResume.pdf" download="Satya-Vinod-Kantipudi-Resume.pdf" target="_blank" class="btn btn-ghost"><i class="fa-solid fa-download"></i> Résumé</a>
       </div>
       <div class="socials">
-        <a href="https://www.linkedin.com/in/svk1510/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://github.com/vinod151019" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://medium.com/@vinodkantipudi1510" target="_blank" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
+        <a href="https://www.linkedin.com/in/svk1510/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/vinod151019" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://medium.com/@vinodkantipudi1510" target="_blank" rel="noopener" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
       </div>
     </div>
   </div>
@@ -300,11 +383,11 @@
 <div class="stats">
   <div class="wrap">
     <div class="stat reveal"><div class="num" data-count="635" data-prefix="$" data-suffix="K+">0</div><div class="lbl">AWS revenue influenced</div></div>
-      <div class="stat reveal"><div class="num" data-count="8" data-suffix="×">0</div><div class="lbl">AWS Certifications</div></div>
-    <div class="stat reveal"><div class="num" data-count="215" data-suffix="+">0</div><div class="lbl">SA engagements logged</div></div>
-    <div class="stat reveal"><div class="num" data-count="40" data-suffix="+">0</div><div class="lbl">Startups &amp; ISVs supported</div></div>
-    <div class="stat reveal"><div class="num" data-count="431">0</div><div class="lbl">Live workshop attendees</div></div>
-    <div class="stat reveal"><div class="num" data-count="123">0</div><div class="lbl">Model-tuning experiments</div></div>
+    <div class="stat reveal"><div class="num" data-count="268" data-prefix="$" data-suffix="K+">0</div><div class="lbl">Launched to production</div></div>
+    <div class="stat reveal"><div class="num" data-count="5" data-suffix="+">0</div><div class="lbl">Products to production</div></div>
+    <div class="stat reveal"><div class="num" data-count="40" data-suffix="+">0</div><div class="lbl">Customers advised</div></div>
+    <div class="stat reveal"><div class="num" data-count="215" data-suffix="+">0</div><div class="lbl">Discovery &amp; advisory sessions</div></div>
+    <div class="stat reveal"><div class="num" data-count="8" data-suffix="×">0</div><div class="lbl">AWS Certifications</div></div>
   </div>
 </div>
 
@@ -313,33 +396,34 @@
     <div class="about-grid">
       <div class="reveal">
         <span class="eyebrow">Who I am</span>
-        <h2 class="section-title">Building production AI on AWS</h2>
+        <h2 class="section-title">A technologist who thinks like a product owner</h2>
         <p>
-          I'm an <strong>AWS Solutions Architect</strong> whose core expertise is <strong>AI/ML, Generative AI,
-          and Agentic AI</strong>. I work day-to-day with founders, CTOs, and engineering teams to design and ship
-          intelligent systems on AWS — agentic applications on Amazon Bedrock &amp; AgentCore, retrieval-augmented
-          generation, and custom-tuned models.
+          I'm an <strong>AWS Solutions Architect</strong> whose day job looks a lot like product management: I run
+          discovery with founders, CTOs, and engineering teams; translate ambiguous business problems into technical
+          roadmaps; make build-vs-buy and prioritization calls; and drive things from prototype to launch. My focus
+          area is <strong>AI/ML, Generative AI, and Agentic AI</strong> — the fastest-moving product surface in tech.
         </p>
         <p>
-          I started as a <strong>data engineer</strong> building large-scale ETL and lakehouse pipelines — a
-          foundation that now makes me effective at the full AI lifecycle: <strong>data preparation, fine-tuning
-          and evaluation, agent orchestration, guardrails, and deployment</strong>. I've run 100+ SageMaker
-          fine-tuning experiments, co-owned the security layer of an open-source agent framework, and taken
-          agentic-AI demos to global AWS Summit stages.
+          I started as a <strong>data engineer</strong>, which grounds my product judgment in how systems and data
+          actually work. That means I can size feasibility with engineers, reason about cost and trade-offs, and still
+          keep the conversation anchored on <strong>customer value and business outcomes</strong>. I've helped ship
+          <strong>5+ products to production</strong>, influenced <strong>~$635K</strong> in pipeline, and taken an
+          agentic-AI product to three AWS Summit stages.
         </p>
         <p>
-          I'm <strong>8&times; AWS Certified</strong> and hands-on by default — whether that's unblocking a
-          throttled Bedrock workload, architecting a multi-tenant RAG search platform, or squeezing measurable
-          accuracy gains out of a small language model.
+          Now I'm channeling that into a <strong>Technical Product Management</strong> path — where the technical
+          depth, the customer obsession, and the commercial instinct all point in the same direction: shipping
+          products people use.
         </p>
       </div>
       <div class="about-card reveal">
         <h4>At a glance</h4>
-        <div class="fact"><i class="fa-solid fa-briefcase"></i><div><div class="k">Role</div><div class="v">Solutions Architect, AWS</div></div></div>
-        <div class="fact"><i class="fa-solid fa-robot"></i><div><div class="k">Core expertise</div><div class="v">AI/ML · Generative AI · Agentic AI</div></div></div>
-        <div class="fact"><i class="fa-solid fa-certificate"></i><div><div class="k">Credentials</div><div class="v">8&times; AWS Certified</div></div></div>
-        <div class="fact"><i class="fa-solid fa-users-gear"></i><div><div class="k">Segment</div><div class="v">Startups &amp; ISVs</div></div></div>
-        <div class="fact"><i class="fa-solid fa-graduation-cap"></i><div><div class="k">Education</div><div class="v">MS Business Analytics, UT Dallas</div></div></div>
+        <div class="fact hl"><i class="fa-solid fa-compass"></i><div><div class="k">Seeking</div><div class="v">Technical Product Manager · AI/ML</div></div></div>
+        <div class="fact"><i class="fa-solid fa-briefcase"></i><div><div class="k">Current role</div><div class="v">Solutions Architect, AWS</div></div></div>
+        <div class="fact"><i class="fa-solid fa-lightbulb"></i><div><div class="k">Product focus</div><div class="v">AI/ML · Generative &amp; Agentic AI</div></div></div>
+        <div class="fact"><i class="fa-solid fa-graduation-cap"></i><div><div class="k">Education</div><div class="v">MS Business Analytics · UT Dallas (3.95 GPA)</div></div></div>
+        <div class="fact"><i class="fa-solid fa-certificate"></i><div><div class="k">Credentials</div><div class="v">8× AWS Certified</div></div></div>
+        <div class="fact"><i class="fa-solid fa-location-dot"></i><div><div class="k">Based in</div><div class="v">Seattle, WA</div></div></div>
       </div>
     </div>
   </div>
@@ -348,46 +432,46 @@
 <section id="focus">
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow">What I do</span>
-      <h2 class="section-title">AI-first solutions architecture</h2>
-      <p class="section-intro">My work centers on AI/ML and generative AI, backed by strong cloud and data foundations.</p>
+      <span class="eyebrow">What I bring</span>
+      <h2 class="section-title">Product management, with an engineer's depth</h2>
+      <p class="section-intro">The core PM competencies I've been practicing every day as a customer-facing architect — plus the AI/ML depth to own technical products credibly.</p>
     </div>
     <div class="grid g3">
       <div class="card reveal">
+        <div class="ic"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h3>Discovery &amp; Customer Insight</h3>
+        <p>Ran discovery with 40+ startups and ISVs — surfacing jobs-to-be-done, pain points, and requirements, then turning them into problem statements engineering can act on.</p>
+        <div class="tags"><span class="tag">Customer interviews</span><span class="tag">Requirements</span><span class="tag">Jobs-to-be-done</span></div>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><i class="fa-solid fa-map-signs"></i></div>
+        <h3>Roadmapping &amp; Prioritization</h3>
+        <p>Led technical roadmap planning and architecture reviews — sequencing work, scoping MVPs, and making explicit trade-offs between speed, cost, risk, and value.</p>
+        <div class="tags"><span class="tag">Roadmaps</span><span class="tag">MVP scoping</span><span class="tag">Trade-offs</span></div>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Data-Driven Decisions</h3>
+        <p>MS in Business Analytics applied in the wild: designing 123 experiments, defining success metrics, and using evaluation data to decide what ships — not opinions.</p>
+        <div class="tags"><span class="tag">Metrics &amp; KPIs</span><span class="tag">Experimentation</span><span class="tag">SQL &amp; analytics</span></div>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><i class="fa-solid fa-handshake-angle"></i></div>
+        <h3>Cross-Functional Influence</h3>
+        <p>The connective tissue between customers, engineering, and business — aligning stakeholders up to CIO level and communicating decisions to technical and non-technical audiences.</p>
+        <div class="tags"><span class="tag">Stakeholder mgmt</span><span class="tag">Exec comms</span><span class="tag">Alignment</span></div>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><i class="fa-solid fa-rocket"></i></div>
+        <h3>Go-to-Market &amp; Commercial</h3>
+        <p>Built the business case on real deals — won an AWS-native stack over an incumbent, unblocked stalled launches, and influenced ~$635K in pipeline with ~$268K launched.</p>
+        <div class="tags"><span class="tag">Business case</span><span class="tag">Competitive analysis</span><span class="tag">Launch</span></div>
+      </div>
+      <div class="card reveal">
         <div class="ic"><i class="fa-solid fa-robot"></i></div>
-        <h3>Generative &amp; Agentic AI</h3>
-        <p>Designing production agentic systems on Amazon Bedrock &amp; AgentCore — multi-agent orchestration, tool use, guardrails, and secure, observable deployments.</p>
-        <div class="tags"><span class="tag">Bedrock</span><span class="tag">AgentCore</span><span class="tag">Strands</span><span class="tag">MCP</span><span class="tag">Nova · Claude</span></div>
-      </div>
-      <div class="card reveal">
-        <div class="ic"><i class="fa-solid fa-brain"></i></div>
-        <h3>AI/ML &amp; Model Customization</h3>
-        <p>Fine-tuning and evaluating models end to end — SFT, LoRA/QLoRA, and DPO on Amazon SageMaker &amp; Bedrock, with data prep, failure taxonomies, and self-healing pipelines.</p>
-        <div class="tags"><span class="tag">SageMaker</span><span class="tag">Fine-tuning</span><span class="tag">LoRA · DPO</span><span class="tag">Evaluation</span></div>
-      </div>
-      <div class="card reveal">
-        <div class="ic"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-        <h3>RAG &amp; Knowledge Systems</h3>
-        <p>Multi-tenant retrieval-augmented generation on Amazon OpenSearch &amp; Bedrock Knowledge Bases — permissions-aware search, metadata filtering, and ML-powered ranking.</p>
-        <div class="tags"><span class="tag">OpenSearch</span><span class="tag">Knowledge Bases</span><span class="tag">Vector Search</span></div>
-      </div>
-      <div class="card reveal">
-        <div class="ic"><i class="fa-solid fa-arrows-turn-to-dots"></i></div>
-        <h3>Migration &amp; Modernization</h3>
-        <p>Moving workloads to AWS and modernizing them — VMware exits, containers on EKS, database migrations to Aurora, and Graviton adoption for price-performance.</p>
-        <div class="tags"><span class="tag">VMware → AWS</span><span class="tag">EKS</span><span class="tag">Aurora</span><span class="tag">Graviton</span></div>
-      </div>
-      <div class="card reveal">
-        <div class="ic"><i class="fa-solid fa-database"></i></div>
-        <h3>Data &amp; Analytics</h3>
-        <p>Lakehouse and pipeline architectures that feed AI — S3 + Glue + Athena, Redshift, and streaming — turning raw data into query-ready, model-ready assets.</p>
-        <div class="tags"><span class="tag">Glue</span><span class="tag">Athena</span><span class="tag">Redshift</span><span class="tag">QuickSight</span></div>
-      </div>
-      <div class="card reveal">
-        <div class="ic"><i class="fa-solid fa-shield-halved"></i></div>
-        <h3>Cost, Security &amp; Resilience</h3>
-        <p>Well-Architected reviews across the board — right-sizing &amp; Savings Plans, WAF/Shield &amp; IAM/Cognito, and resilience programs, backups, and multi-region designs.</p>
-        <div class="tags"><span class="tag">Well-Architected</span><span class="tag">WAF · Shield</span><span class="tag">Savings Plans</span><span class="tag">Resilience</span></div>
+        <h3>AI/ML Product Depth</h3>
+        <p>I can own AI products because I've built them — agentic systems on Bedrock &amp; AgentCore, RAG platforms, and fine-tuning pipelines. Deep enough to spot what's real vs. hype.</p>
+        <div class="tags"><span class="tag">GenAI &amp; Agents</span><span class="tag">RAG</span><span class="tag">Fine-tuning</span></div>
       </div>
     </div>
   </div>
@@ -397,68 +481,80 @@
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">Selected impact</span>
-      <h2 class="section-title">Engagements that shipped</h2>
-      <p class="section-intro">A sample of customer work in my current role — described by industry and outcome (customer identities kept confidential).</p>
+      <h2 class="section-title">Problems owned, outcomes shipped</h2>
+      <p class="section-intro">A sample of my work — framed as a product owner would: the problem, the decision I drove, and the outcome. (Customer identities kept confidential.)</p>
     </div>
     <div class="grid g2">
 
       <div class="eng reveal">
-        <div class="badge-co"><i class="fa-solid fa-utensils"></i></div>
-        <div>
-          <h3>Food-Tech Platform <span class="pill">Migration &amp; Resilience</span></h3>
-          <div class="sub">Multi-workstream account</div>
-          <p>Guided a VMware-to-AWS migration, EKS blue/green cluster upgrades, and an Amazon Connect contact-center migration. Drove a security-enhancement initiative (Audit Manager, Patch Manager), a Customer Resilience Program, AWS Backup integration, and RabbitMQ federation on Amazon MQ.</p>
-          <div class="tags"><span class="tag">VMware</span><span class="tag">EKS</span><span class="tag">Amazon Connect</span><span class="tag">Audit Manager</span><span class="tag">Amazon MQ</span></div>
-        </div>
-      </div>
-
-      <div class="eng reveal">
-        <div class="badge-co"><i class="fa-solid fa-helmet-safety"></i></div>
-        <div>
-          <h3>Connected-Worker SaaS <span class="pill">GenAI · RAG</span></h3>
-          <div class="sub">Manufacturing software ISV</div>
-          <p>Led technical roadmap planning and architecture reviews for a production-grade, multi-tenant natural-language search &amp; RAG platform on Amazon OpenSearch — designing permissions-aware search, metadata filtering, ML-powered ranking, and multi-tool agent orchestration with AgentCore.</p>
-          <div class="tags"><span class="tag">OpenSearch</span><span class="tag">AgentCore</span><span class="tag">RAG</span><span class="tag">Multi-tenancy</span></div>
-        </div>
-      </div>
-
-      <div class="eng reveal">
         <div class="badge-co"><i class="fa-solid fa-gauge-high"></i></div>
         <div>
-          <h3>Consumer-Electronics SaaS <span class="pill win">AWS-Native Win</span></h3>
-          <div class="sub">Observability modernization</div>
-          <p>Led a CIO-level observability deep-dive and won an AWS-native stack — Amazon Managed Prometheus + Managed Grafana + CloudWatch + X-Ray — over third-party APM tools, launched into production. Follow-on work added multi-region redundancy and a migration from a third-party LLM to Amazon Bedrock.</p>
-          <div class="tags"><span class="tag">AMP + AMG</span><span class="tag">CloudWatch</span><span class="tag">X-Ray</span><span class="tag">Bedrock</span></div>
-        </div>
-      </div>
-
-      <div class="eng reveal">
-        <div class="badge-co"><i class="fa-solid fa-cart-shopping"></i></div>
-        <div>
-          <h3>High-Volume E-Commerce <span class="pill">Security</span></h3>
-          <div class="sub">Platform at billions of requests/mo</div>
-          <p>Architected a WAF + Shield Advanced + Bot Control solution with ML-based detection of pattern-evading payment-fraud bots, centralized via Firewall Manager across multiple accounts — displacing an incumbent CDN. Also drove CloudFront migration and a Graviton4 / C7a Kubernetes migration.</p>
-          <div class="tags"><span class="tag">WAF · Shield</span><span class="tag">Bot Control</span><span class="tag">CloudFront</span><span class="tag">Graviton4</span></div>
+          <div class="role-tag">Build-vs-buy · Competitive win</div>
+          <h3>Consumer-Electronics SaaS <span class="pill win">Launched</span></h3>
+          <div class="sub">Observability platform decision</div>
+          <p>Ran a CIO-level discovery to understand the real problem behind an observability gap, then made the case for an AWS-native stack (Managed Prometheus + Grafana + CloudWatch + X-Ray) over an entrenched third-party APM tool.</p>
+          <span class="outcome"><b>Outcome:</b> won the decision, launched to production, and expanded scope to multi-region redundancy and a third-party-LLM → Bedrock migration.</span>
+          <div class="tags"><span class="tag">Discovery</span><span class="tag">Build-vs-buy</span><span class="tag">Competitive displacement</span></div>
         </div>
       </div>
 
       <div class="eng reveal">
         <div class="badge-co"><i class="fa-solid fa-file-invoice-dollar"></i></div>
         <div>
+          <div class="role-tag">Unblocking a launch · Trade-offs</div>
           <h3>Tax-Software ISV <span class="pill win">Launched</span></h3>
-          <div class="sub">Regulated / US data-residency</div>
-          <p>Root-caused a critical Bedrock throttling blocker — right-sizing max-tokens improved concurrent capacity 3–4× and unblocked production. Advised on prompt caching, model right-sizing (Haiku/Sonnet), and Knowledge Bases for a shared developer assistant, all within strict compliance constraints.</p>
-          <div class="tags"><span class="tag">Bedrock</span><span class="tag">Prompt Caching</span><span class="tag">Knowledge Bases</span></div>
+          <div class="sub">Regulated · US data-residency</div>
+          <p>A production launch was stuck on a capacity blocker. I root-caused it, and drove the trade-off decisions — capacity tuning, prompt caching, and right-sizing the model tier (Haiku/Sonnet) against cost and latency, all inside strict compliance constraints.</p>
+          <span class="outcome"><b>Outcome:</b> 3–4× concurrent capacity, blocker cleared, and a blocked project turned into a shipped launch.</span>
+          <div class="tags"><span class="tag">Prioritization</span><span class="tag">Cost/latency trade-offs</span><span class="tag">Compliance</span></div>
+        </div>
+      </div>
+
+      <div class="eng reveal">
+        <div class="badge-co"><i class="fa-solid fa-helmet-safety"></i></div>
+        <div>
+          <div class="role-tag">Product roadmap · Requirements</div>
+          <h3>Connected-Worker SaaS <span class="pill">GenAI · RAG</span></h3>
+          <div class="sub">Manufacturing software ISV</div>
+          <p>Owned technical roadmap planning for a multi-tenant natural-language search &amp; RAG product — defining the requirements for permissions-aware search, metadata filtering, ML ranking, and multi-agent orchestration with the customer's product and engineering teams.</p>
+          <span class="outcome"><b>Outcome:</b> a prioritized, production-grade roadmap the customer could build against.</span>
+          <div class="tags"><span class="tag">Roadmap</span><span class="tag">Multi-tenancy</span><span class="tag">RAG</span></div>
+        </div>
+      </div>
+
+      <div class="eng reveal">
+        <div class="badge-co"><i class="fa-solid fa-cart-shopping"></i></div>
+        <div>
+          <div class="role-tag">Business case · Risk vs. cost</div>
+          <h3>High-Volume E-Commerce <span class="pill">Security</span></h3>
+          <div class="sub">Platform at billions of requests/mo</div>
+          <p>Framed the business case for a fraud-bot defense (WAF + Shield Advanced + Bot Control with ML detection of pattern-evading bots), balancing security risk, cost, and performance across multiple stakeholders and accounts.</p>
+          <span class="outcome"><b>Outcome:</b> displaced an incumbent CDN and drove CloudFront + Graviton4 migrations for price-performance.</span>
+          <div class="tags"><span class="tag">Business case</span><span class="tag">Risk trade-offs</span><span class="tag">Displacement</span></div>
+        </div>
+      </div>
+
+      <div class="eng reveal">
+        <div class="badge-co"><i class="fa-solid fa-utensils"></i></div>
+        <div>
+          <div class="role-tag">Program ownership · Delivery</div>
+          <h3>Food-Tech Platform <span class="pill">Multi-workstream</span></h3>
+          <div class="sub">Migration &amp; resilience program</div>
+          <p>Coordinated a multi-workstream modernization program — VMware-to-AWS migration, EKS blue/green upgrades, a contact-center migration, and a customer resilience program — sequencing dependencies and keeping stakeholders aligned while the business kept running.</p>
+          <span class="outcome"><b>Outcome:</b> delivered parallel workstreams without disrupting live operations.</span>
+          <div class="tags"><span class="tag">Program mgmt</span><span class="tag">Sequencing</span><span class="tag">Stakeholders</span></div>
         </div>
       </div>
 
       <div class="eng reveal">
         <div class="badge-co"><i class="fa-solid fa-heart-pulse"></i></div>
         <div>
+          <div class="role-tag">Data-to-decisions · Cost</div>
           <h3>HealthTech &amp; Observability ISVs <span class="pill">Data &amp; Cost</span></h3>
           <div class="sub">Multiple accounts</div>
-          <p>Built a JSON analytics pipeline on S3 + Glue + Athena (with a resilience exercise) for a HealthTech ISV, and root-caused a stuck AWS Backup configuration for a network-observability ISV that had kept daily costs flat — setting a clear path to stabilized savings.</p>
-          <div class="tags"><span class="tag">S3 · Glue · Athena</span><span class="tag">AWS Backup</span><span class="tag">Resilience</span></div>
+          <p>Turned raw data into decisions — built a JSON analytics pipeline (S3 + Glue + Athena) for a HealthTech ISV — and root-caused a stuck backup configuration that had kept another ISV's daily costs stubbornly flat.</p>
+          <span class="outcome"><b>Outcome:</b> query-ready analytics delivered and a clear path to stabilized cost savings.</span>
+          <div class="tags"><span class="tag">Analytics</span><span class="tag">Cost optimization</span><span class="tag">Root-cause</span></div>
         </div>
       </div>
 
@@ -469,9 +565,9 @@
 <section id="leadership">
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow">Thought leadership &amp; community</span>
-      <h2 class="section-title">Teaching, speaking &amp; building in the open</h2>
-      <p class="section-intro">Beyond customer accounts, I invest in enablement, public speaking, and open-source — helping others build with agentic AI on AWS.</p>
+      <span class="eyebrow">Communication &amp; influence</span>
+      <h2 class="section-title">Speaking, teaching &amp; building in the open</h2>
+      <p class="section-intro">Product leadership is communication. I evangelize on stage, enable other teams, and ship in the open — the muscle a PM uses to align an org and tell a product story.</p>
     </div>
     <div class="grid g3">
 
@@ -482,50 +578,52 @@
           <small>Moderated a high-impact Amazon Nova Agent Building Session — one of my largest live technical audiences.</small>
         </div>
         <div class="body">
-          <h3>SignalScout PV on the global AWS Summit stage</h3>
+          <h3>SignalScout PV — from concept to the AWS Summit stage</h3>
           <p>
-            I designed and built <strong>SignalScout PV</strong>, a multi-agent pharmacovigilance system on Amazon
-            Bedrock AgentCore + Strands, that ingests FDA adverse-event data, runs statistical disproportionality
-            analysis, and generates evidence-backed safety-signal packets with clinical validation. It was a featured
-            demo in the <strong>Agents for Business</strong> track at <strong>AWS Summit London, LA, and NYC</strong> —
-            drawing <strong>270+ badge scans</strong> and a <strong>4.71/5 event CSAT</strong>, among the highest engagement on the demo towers.
+            I owned <strong>SignalScout PV</strong> end-to-end — a multi-agent pharmacovigilance product on Amazon
+            Bedrock AgentCore + Strands that ingests FDA adverse-event data, runs disproportionality analysis, and
+            generates evidence-backed safety-signal packets. I defined the concept, built the demo, and told the story
+            in the <strong>Agents for Business</strong> track at <strong>AWS Summit London, LA &amp; NYC</strong> —
+            drawing <strong>270+ badge scans</strong> and a <strong>4.71/5 CSAT</strong>, among the highest engagement
+            on the demo towers.
+            <!-- TODO: link a 90-sec demo video (YouTube/Loom) or a summit photo here — turns this claim into proof. -->
           </p>
         </div>
       </div>
 
       <div class="card reveal">
         <div class="ic"><i class="fa-brands fa-github"></i></div>
-        <h3>Open-source Agentic AI Framework</h3>
-        <p>Co-owned the <strong>Security layer</strong> of a six-layer reference framework for production agents on AgentCore — Cognito JWT + Cedar policies (ENFORCE) + Bedrock Guardrails via the Gateway. Shipped with <strong>zero AppSec findings</strong> and open-sourced on aws-samples.</p>
-        <div class="tags"><span class="tag">Cedar</span><span class="tag">Cognito</span><span class="tag">Guardrails</span><span class="tag">Open Source</span></div>
+        <h3>Open-Source Agentic AI Framework</h3>
+        <p>Owned the <strong>Security layer</strong> of a six-layer reference framework for production agents on AgentCore — Cognito JWT + Cedar policies + Bedrock Guardrails via the Gateway. Shipped with <strong>zero AppSec findings</strong> and open-sourced on aws-samples.</p>
+        <div class="tags"><span class="tag">Ownership</span><span class="tag">Open source</span><span class="tag">Security</span></div>
       </div>
 
       <div class="card reveal">
         <div class="ic"><i class="fa-solid fa-flask-vial"></i></div>
-        <h3>ISV Model Customization Lab</h3>
-        <p>Co-delivered SA enablement on fine-tuning small language models on AWS. Ran <strong>123 SageMaker experiments</strong>, achieving a <strong>43% relative accuracy lift</strong> on medical benchmarks (42.7% → 61.3%) with SFT + Online DPO on Qwen 3 4B.</p>
-        <div class="tags"><span class="tag">SageMaker</span><span class="tag">LoRA/QLoRA</span><span class="tag">DPO</span></div>
+        <h3>Model Customization Lab</h3>
+        <p>Co-delivered enablement on fine-tuning small language models. Designed and ran <strong>123 experiments</strong> and used the results to hit a <strong>43% relative accuracy lift</strong> (42.7% → 61.3%) — a data-driven decision, not a guess.</p>
+        <div class="tags"><span class="tag">Experimentation</span><span class="tag">Metrics</span><span class="tag">SFT · DPO</span></div>
       </div>
 
       <div class="card reveal">
         <div class="ic"><i class="fa-solid fa-chalkboard-user"></i></div>
         <h3>Workshops &amp; Game Days</h3>
-        <p>Led and co-facilitated Agentic AI Game Days and university workshops for enterprise teams and students — building &amp; deploying agents with Bedrock, AgentCore, Strands, MCP, and Kiro. Consistently strong CSAT and NPS across sessions.</p>
-        <div class="tags"><span class="tag">AgentCore</span><span class="tag">Kiro</span><span class="tag">MCP</span><span class="tag">Immersion Days</span></div>
+        <p>Led Agentic AI Game Days and university workshops for enterprise teams and students — building &amp; deploying agents with Bedrock, AgentCore, Strands, MCP, and Kiro. Consistently strong CSAT and NPS.</p>
+        <div class="tags"><span class="tag">Enablement</span><span class="tag">Facilitation</span><span class="tag">Teaching</span></div>
       </div>
 
       <div class="card reveal">
         <div class="ic"><i class="fa-solid fa-microphone-lines"></i></div>
-        <h3>Public Speaking &amp; Enablement</h3>
-        <p>Delivered "Accelerate AI Agents from Prototype to Production" (Bedrock AgentCore), immersion days on GenAI &amp; Amazon Q Developer, and an internal AI-cademy RAG deep-dive (4.54/5 satisfaction).</p>
-        <div class="tags"><span class="tag">Bedrock</span><span class="tag">Q Developer</span><span class="tag">RAG</span></div>
+        <h3>Public Speaking</h3>
+        <p>Delivered "Accelerate AI Agents from Prototype to Production," immersion days on GenAI &amp; Amazon Q Developer, and an internal AI-cademy RAG deep-dive (4.54/5 satisfaction) — translating complex tech for mixed audiences.</p>
+        <div class="tags"><span class="tag">Storytelling</span><span class="tag">Evangelism</span><span class="tag">Q Developer</span></div>
       </div>
 
       <div class="card reveal">
         <div class="ic"><i class="fa-solid fa-hands-helping"></i></div>
         <h3>Mentoring &amp; Giving Back</h3>
-        <p>Mentored an SA intern through their builder phases, served as a Tech U Demo Day evaluator, judged a university hackathon (100+ students), and organized community volunteering with Ronald McDonald House Charities.</p>
-        <div class="tags"><span class="tag">Mentorship</span><span class="tag">Tech U</span><span class="tag">Hackathons</span></div>
+        <p>Mentored an SA intern through their builder phases, served as a Tech U Demo Day evaluator, judged a university hackathon (100+ students), and organized volunteering with Ronald McDonald House Charities.</p>
+        <div class="tags"><span class="tag">Mentorship</span><span class="tag">Evaluation</span><span class="tag">Community</span></div>
       </div>
 
     </div>
@@ -537,41 +635,40 @@
     <div class="reveal">
       <span class="eyebrow">Toolbox</span>
       <h2 class="section-title">Skills &amp; technologies</h2>
-      <p class="section-intro">The stack I architect, build, and advise on — AI/ML first.</p>
+      <p class="section-intro">Product craft first, backed by real technical and data depth.</p>
     </div>
     <div class="skills-grid">
+      <div class="skill-cat feature reveal">
+        <h4><i class="fa-solid fa-lightbulb"></i> Product &amp; Business</h4>
+        <div class="chips">
+          <span class="chip">Product Discovery</span><span class="chip">Roadmapping</span><span class="chip">Prioritization (RICE)</span>
+          <span class="chip">PRDs &amp; Specs</span><span class="chip">Requirements</span><span class="chip">Stakeholder Management</span>
+          <span class="chip">Go-to-Market</span><span class="chip">Competitive Analysis</span><span class="chip">Business Analytics</span>
+          <span class="chip">Metrics &amp; KPIs</span><span class="chip">Experimentation</span><span class="chip">SQL</span>
+        </div>
+      </div>
       <div class="skill-cat reveal">
-        <h4><i class="fa-solid fa-robot"></i> Generative &amp; Agentic AI</h4>
+        <h4><i class="fa-solid fa-robot"></i> AI/ML &amp; Generative AI</h4>
         <div class="chips">
           <span class="chip">Amazon Bedrock</span><span class="chip">Bedrock AgentCore</span><span class="chip">Strands Agents</span>
-          <span class="chip">Amazon Nova</span><span class="chip">Anthropic Claude</span><span class="chip">Knowledge Bases</span>
-          <span class="chip">OpenSearch (RAG)</span><span class="chip">MCP</span><span class="chip">Bedrock Guardrails</span>
-          <span class="chip">Multi-agent orchestration</span>
+          <span class="chip">Amazon Nova</span><span class="chip">Anthropic Claude</span><span class="chip">RAG &amp; Knowledge Bases</span>
+          <span class="chip">Fine-tuning (SFT · LoRA · DPO)</span><span class="chip">Model evaluation</span><span class="chip">Guardrails</span><span class="chip">MCP</span>
         </div>
       </div>
       <div class="skill-cat reveal">
-        <h4><i class="fa-solid fa-brain"></i> AI/ML &amp; Model Customization</h4>
+        <h4><i class="fa-solid fa-cloud"></i> Cloud &amp; Data Platform</h4>
         <div class="chips">
-          <span class="chip">Amazon SageMaker</span><span class="chip">Fine-tuning (SFT)</span><span class="chip">LoRA / QLoRA</span>
-          <span class="chip">DPO / RLHF</span><span class="chip">Model evaluation</span><span class="chip">SLMs</span>
-          <span class="chip">PyTorch</span><span class="chip">Hugging Face</span><span class="chip">Python</span>
+          <span class="chip">AWS (SA · 8× Certified)</span><span class="chip">SageMaker</span><span class="chip">EKS · Lambda</span>
+          <span class="chip">Glue · Athena · Redshift</span><span class="chip">Aurora · RDS</span><span class="chip">Kinesis · Spark</span>
+          <span class="chip">QuickSight</span><span class="chip">CDK · CloudFormation</span><span class="chip">Python</span>
         </div>
       </div>
       <div class="skill-cat reveal">
-        <h4><i class="fa-solid fa-database"></i> Data &amp; Analytics</h4>
+        <h4><i class="fa-solid fa-people-arrows"></i> Delivery &amp; Communication</h4>
         <div class="chips">
-          <span class="chip">AWS Glue</span><span class="chip">Athena</span><span class="chip">Redshift</span>
-          <span class="chip">EMR</span><span class="chip">Kinesis</span><span class="chip">QuickSight</span>
-          <span class="chip">DMS</span><span class="chip">Apache Spark</span><span class="chip">Airflow</span>
-          <span class="chip">Iceberg · Hudi · Delta</span><span class="chip">SQL</span>
-        </div>
-      </div>
-      <div class="skill-cat reveal">
-        <h4><i class="fa-solid fa-cloud"></i> Cloud, Security &amp; Ops</h4>
-        <div class="chips">
-          <span class="chip">EC2 · Graviton</span><span class="chip">EKS · ECS</span><span class="chip">Lambda</span>
-          <span class="chip">Aurora · RDS</span><span class="chip">IAM · Cognito</span><span class="chip">WAF · Shield</span>
-          <span class="chip">Cedar Policies</span><span class="chip">CloudWatch · X-Ray</span><span class="chip">CDK · CloudFormation</span>
+          <span class="chip">Agile / Scrum</span><span class="chip">Cross-functional leadership</span><span class="chip">Technical writing</span>
+          <span class="chip">Executive communication</span><span class="chip">Public speaking</span><span class="chip">Facilitation</span>
+          <span class="chip">Well-Architected reviews</span><span class="chip">Enablement</span>
         </div>
       </div>
     </div>
@@ -582,56 +679,67 @@
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">Signature projects</span>
-      <h2 class="section-title">Things I've built</h2>
-      <p class="section-intro">Hands-on builds — from agentic AI systems to model fine-tuning and data pipelines.</p>
+      <h2 class="section-title">Products I've shaped &amp; built</h2>
+      <p class="section-intro">Hands-on builds — described by the problem they solve and the outcome, the way a PM frames a launch.</p>
     </div>
     <div class="grid g3">
+
+      <!-- TODO (HIGH PRIORITY): every card below should have at least one clickable artifact (repo, demo video, diagram, or write-up).
+           Cards without a public repo currently have a "Demo" placeholder — replace the "#" with a real link, or delete the link block. -->
 
       <div class="proj reveal">
         <div class="top"><span class="emoji">🧬</span></div>
         <h3>SignalScout PV</h3>
-        <p>Multi-agent pharmacovigilance system on Bedrock AgentCore + Strands — ingests FDA adverse-event data, runs disproportionality analysis, and generates clinically-validated safety-signal packets. Featured at three AWS Summits.</p>
-        <div class="tags"><span class="tag">AgentCore</span><span class="tag">Strands</span><span class="tag">Healthcare AI</span></div>
+        <p><b>Problem:</b> drug-safety teams drown in FDA adverse-event data. <b>Build:</b> a multi-agent system (AgentCore + Strands) that runs disproportionality analysis and generates evidence-backed safety-signal packets. <b>Outcome:</b> featured at 3 AWS Summits, 4.71/5 CSAT.</p>
+        <div class="tags"><span class="tag">Agentic AI</span><span class="tag">Healthcare</span><span class="tag">0→1 product</span></div>
       </div>
 
       <div class="proj reveal">
-        <div class="top"><span class="emoji">🧩</span><div class="links"><a href="https://github.com/aws-samples/sample-pluggable-agentic-ai-framework" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></div></div>
+        <div class="top"><span class="emoji">🧩</span>
+          <div class="links">
+            <a href="https://github.com/aws-samples/sample-pluggable-agentic-ai-framework" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i><span class="lbl">Code</span></a>
+          </div>
+        </div>
         <h3>Pluggable Agentic AI Framework</h3>
-        <p>Open-source six-layer reference framework for production agents on AWS. I co-owned the security layer — Cognito + Cedar + Guardrails through the AgentCore Gateway — shipped with zero AppSec findings.</p>
-        <div class="tags"><span class="tag">AgentCore</span><span class="tag">Security</span><span class="tag">Open Source</span></div>
+        <p><b>Problem:</b> teams lack a secure blueprint for production agents. <b>Build:</b> open-source six-layer reference framework on AWS; I owned the security layer (Cognito + Cedar + Guardrails). <b>Outcome:</b> shipped with zero AppSec findings, open-sourced on aws-samples.</p>
+        <div class="tags"><span class="tag">Open Source</span><span class="tag">Security</span><span class="tag">AgentCore</span></div>
       </div>
 
       <div class="proj reveal">
         <div class="top"><span class="emoji">🩺</span></div>
         <h3>Medical SLM Fine-Tuning</h3>
-        <p>Reproducible recipes for fine-tuning small language models (BioMistral, Qwen 3) for medical reasoning on SageMaker — SFT + DPO pipelines with a validated failure taxonomy and self-healing patterns; 43% accuracy lift.</p>
-        <div class="tags"><span class="tag">SageMaker</span><span class="tag">DPO</span><span class="tag">SLM</span></div>
+        <p><b>Problem:</b> small models underperform on medical reasoning. <b>Build:</b> reproducible SFT + DPO recipes (BioMistral, Qwen 3) on SageMaker with a failure taxonomy. <b>Outcome:</b> 43% relative accuracy lift (42.7% → 61.3%) across 123 experiments.</p>
+        <div class="tags"><span class="tag">Fine-tuning</span><span class="tag">Evaluation</span><span class="tag">Data-driven</span></div>
       </div>
 
       <div class="proj reveal">
         <div class="top"><span class="emoji">🌾</span></div>
         <h3>CropWhisper</h3>
-        <p>Generative-AI advisory app for agriculture built with a CDK-deployed serverless backend and Amazon Bedrock — an end-to-end example of a spec-driven, well-architected GenAI product.</p>
-        <div class="tags"><span class="tag">Bedrock</span><span class="tag">CDK</span><span class="tag">Serverless</span></div>
+        <p><b>Problem:</b> smallholder farmers lack tailored guidance. <b>Build:</b> a GenAI advisory app on a CDK-deployed serverless backend + Amazon Bedrock. <b>Outcome:</b> an end-to-end, spec-driven, well-architected GenAI product.</p>
+        <div class="tags"><span class="tag">Bedrock</span><span class="tag">Serverless</span><span class="tag">0→1 product</span></div>
       </div>
 
       <div class="proj reveal">
         <div class="top"><span class="emoji">🏥</span></div>
         <h3>Healthcare Data Lake</h3>
-        <p>End-to-end healthcare lakehouse on AWS — S3 raw/curated zones, Glue crawlers &amp; ETL, and Athena queries — with an executive walkthrough of the architecture and console flow.</p>
-        <div class="tags"><span class="tag">S3</span><span class="tag">Glue</span><span class="tag">Athena</span></div>
+        <p><b>Problem:</b> siloed healthcare data blocks analytics. <b>Build:</b> an end-to-end lakehouse — S3 raw/curated zones, Glue crawlers &amp; ETL, Athena queries. <b>Outcome:</b> query-ready data with an executive architecture walkthrough.</p>
+        <div class="tags"><span class="tag">Lakehouse</span><span class="tag">Glue</span><span class="tag">Athena</span></div>
       </div>
 
       <div class="proj reveal">
-        <div class="top"><span class="emoji">📊</span><div class="links"><a href="https://github.com/vinod151019/aws_etl_pipeline_on_youtube_data" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></div></div>
+        <div class="top"><span class="emoji">📊</span>
+          <div class="links">
+            <a href="https://github.com/vinod151019/aws_etl_pipeline_on_youtube_data" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i><span class="lbl">Code</span></a>
+          </div>
+        </div>
         <h3>AWS ETL Data Pipeline</h3>
-        <p>End-to-end data-engineering pipeline on AWS — S3, Glue, Athena, and Lambda — cataloging and analyzing semi-structured data for BI-ready insights.</p>
-        <div class="tags"><span class="tag">Glue</span><span class="tag">Athena</span><span class="tag">Lambda</span></div>
+        <p><b>Problem:</b> semi-structured data isn't BI-ready. <b>Build:</b> an end-to-end pipeline — S3, Glue, Athena, Lambda — cataloging and analyzing the data. <b>Outcome:</b> BI-ready insights from raw inputs.</p>
+        <div class="tags"><span class="tag">Data Engineering</span><span class="tag">Glue</span><span class="tag">Lambda</span></div>
       </div>
 
     </div>
     <div style="text-align:center;margin-top:36px" class="reveal">
-      <a href="https://github.com/vinod151019" target="_blank" class="btn btn-ghost"><i class="fa-brands fa-github"></i> More on GitHub</a>
+      <a href="https://github.com/vinod151019" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fa-brands fa-github"></i> More on GitHub</a>
     </div>
   </div>
 </section>
@@ -649,12 +757,12 @@
         <h3>Solutions Architect</h3>
         <div class="org">Amazon Web Services · Startups &amp; ISVs</div>
         <ul>
-          <li>Trusted technical advisor to 40+ startup and ISV accounts, logging 215+ engagements across architecture reviews, demos, immersion days, and roadmap planning.</li>
-          <li>Influenced <strong style="color:var(--text)">~$635K</strong> in AWS revenue pipeline as the account Solutions Architect — including <strong style="color:var(--text)">~$268K launched into production</strong> — across the account portfolio.</li>
-          <li>Helped customers take 5+ workloads from prototype to production launch across generative AI, observability, analytics, and cost optimization.</li>
-          <li>Lead AI/ML, generative-AI &amp; agentic builds on Amazon Bedrock &amp; AgentCore — RAG platforms, multi-agent systems, and model-customization pipelines.</li>
-          <li>Took an agentic-AI demo (SignalScout PV) to AWS Summit London, LA &amp; NYC and moderated a 431-attendee Amazon Nova agent-building session.</li>
-          <li>Co-owned the security layer of an open-source AgentCore framework and delivered SA enablement on model customization (123 fine-tuning experiments).</li>
+          <li>Trusted technical advisor to <strong>40+ startup and ISV accounts</strong>, running <strong>215+ discovery, architecture, and roadmap engagements</strong> — the customer-facing core of product work.</li>
+          <li>Influenced <strong>~$635K</strong> in AWS revenue pipeline — including <strong>~$268K launched into production</strong> — by connecting customer problems to the right solution and business case.</li>
+          <li>Drove <strong>5+ products from prototype to production launch</strong> across generative AI, observability, analytics, and cost optimization.</li>
+          <li>Owned technical roadmaps for AI/ML &amp; agentic builds on Amazon Bedrock &amp; AgentCore — RAG platforms, multi-agent systems, and model-customization pipelines.</li>
+          <li>Took an agentic-AI product (SignalScout PV) to <strong>AWS Summit London, LA &amp; NYC</strong> and moderated a <strong>431-attendee</strong> Amazon Nova agent-building session.</li>
+          <li>Made data-driven calls through <strong>123 fine-tuning experiments</strong> and owned the security layer of an open-source AgentCore framework.</li>
         </ul>
       </div>
       <div class="tl-item reveal">
@@ -663,9 +771,9 @@
         <h3>Data Engineer Intern</h3>
         <div class="org">Center for BrainHealth · The University of Texas at Dallas</div>
         <ul>
-          <li>Migrated 50TB from Amazon RDS to Amazon S3 with DMS, cutting migration time from hours to ~20 minutes.</li>
-          <li>Built 15+ Apache Spark ETL jobs across 100+ tables from raw to refined zones in a lakehouse architecture — reducing storage cost ~20%.</li>
-          <li>Improved Amazon Redshift query performance up to 75% via optimized CTEs and preprocessing.</li>
+          <li>Migrated <strong>50TB</strong> from Amazon RDS to S3 with DMS, cutting migration time from hours to <strong>~20 minutes</strong>.</li>
+          <li>Built 15+ Apache Spark ETL jobs across 100+ tables in a lakehouse architecture — reducing storage cost <strong>~20%</strong>.</li>
+          <li>Improved Amazon Redshift query performance up to <strong>75%</strong> via optimized CTEs and preprocessing.</li>
           <li>Delivered 10+ interactive QuickSight KPI dashboards for product managers and stakeholders.</li>
         </ul>
       </div>
@@ -704,8 +812,8 @@
       </div>
       <div class="reveal">
         <span class="eyebrow">Credentials</span>
-        <h2 class="section-title" style="font-size:clamp(1.7rem,3.5vw,2.4rem)">8&times; AWS Certified</h2>
-        <p style="color:var(--muted);margin-bottom:22px;font-size:.95rem">Across foundational, associate, and specialty levels — including AI/ML and generative AI.</p>
+        <h2 class="section-title" style="font-size:clamp(1.7rem,3.5vw,2.4rem)">8× AWS Certified</h2>
+        <p style="color:var(--muted);margin-bottom:22px;font-size:.95rem">Across foundational, associate, and specialty levels — including AI/ML and generative AI. The technical credibility a TPM needs to lead engineering.</p>
         <div class="cert"><i class="fa-brands fa-aws"></i><div><div class="t">AWS Certified Solutions Architect – Associate</div><div class="i">Amazon Web Services</div></div></div>
         <div class="cert"><i class="fa-brands fa-aws"></i><div><div class="t">AWS Certified Generative AI Developer</div><div class="i">Amazon Web Services</div></div></div>
         <div class="cert"><i class="fa-brands fa-aws"></i><div><div class="t">AWS Certified Cloud Practitioner</div><div class="i">Amazon Web Services</div></div></div>
@@ -720,22 +828,24 @@
     <div class="reveal">
       <span class="eyebrow">Writing</span>
       <h2 class="section-title">From the blog</h2>
-      <p class="section-intro">Deep-dives on data engineering and modern lakehouse architectures.</p>
+      <!-- TODO: your posts are all data-engineering (the "old you"). Publish 1–2 pieces on AI product / agentic AI
+           (e.g. "What I learned taking an agentic AI product to 3 AWS Summits") to match your PM positioning. -->
+      <p class="section-intro">Technical writing — a core PM skill. Deep-dives on data platforms today; AI-product pieces coming next.</p>
     </div>
     <div class="grid g3">
-      <a class="blog reveal" href="https://medium.com/@vinodkantipudi1510/using-a-postgresql-database-as-an-aws-dms-source-a-comprehensive-guide-to-enabling-cdc-9e7b887f7d05" target="_blank">
+      <a class="blog reveal" href="https://medium.com/@vinodkantipudi1510/using-a-postgresql-database-as-an-aws-dms-source-a-comprehensive-guide-to-enabling-cdc-9e7b887f7d05" target="_blank" rel="noopener">
         <span class="cat">AWS · DMS</span>
         <h3>PostgreSQL as an AWS DMS Source: Enabling CDC</h3>
         <p>A comprehensive guide to configuring change data capture when using PostgreSQL with AWS Database Migration Service.</p>
         <span class="more">Read on Medium <i class="fa-solid fa-arrow-right"></i></span>
       </a>
-      <a class="blog reveal" href="https://medium.com/@vinodkantipudi1510/introduction-to-transaction-data-lakes-cf6f576d78fa" target="_blank">
+      <a class="blog reveal" href="https://medium.com/@vinodkantipudi1510/introduction-to-transaction-data-lakes-cf6f576d78fa" target="_blank" rel="noopener">
         <span class="cat">Data Lakes</span>
         <h3>Introduction to Transactional Data Lakes</h3>
         <p>What transactional data lakes are, why ACID matters on the lake, and the benefits they bring to modern data platforms.</p>
         <span class="more">Read on Medium <i class="fa-solid fa-arrow-right"></i></span>
       </a>
-      <a class="blog reveal" href="https://medium.com/@vinodkantipudi1510/comparison-of-different-data-lake-formats-i-e-apache-iceberg-apache-hudi-and-delta-lake-defd2cde5a1" target="_blank">
+      <a class="blog reveal" href="https://medium.com/@vinodkantipudi1510/comparison-of-different-data-lake-formats-i-e-apache-iceberg-apache-hudi-and-delta-lake-defd2cde5a1" target="_blank" rel="noopener">
         <span class="cat">Architecture</span>
         <h3>Iceberg vs. Hudi vs. Delta Lake</h3>
         <p>A side-by-side comparison of the leading open table formats — trade-offs, strengths, and when to choose each.</p>
@@ -749,11 +859,11 @@
   <div class="wrap">
     <div class="box reveal">
       <span class="eyebrow" style="justify-content:center">Let's connect</span>
-      <h2>Building AI on AWS?</h2>
-      <p>Whether it's agentic AI, a RAG platform, model fine-tuning, or getting your cloud foundations right — I'm always happy to talk architecture. Reach out.</p>
+      <h2>Looking for a technical PM who ships?</h2>
+      <p>I'm exploring Technical Product Manager and Product Manager (AI/ML) roles. If you're building AI products and want someone who bridges customers, business, and engineering — let's talk.</p>
       <div class="cta-row" style="justify-content:center">
-        <a href="https://www.linkedin.com/in/svk1510/" target="_blank" class="btn btn-primary"><i class="fa-brands fa-linkedin-in"></i> Connect on LinkedIn</a>
-        <a href="https://github.com/vinod151019" target="_blank" class="btn btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/svk1510/" target="_blank" rel="noopener" class="btn btn-primary"><i class="fa-brands fa-linkedin-in"></i> Connect on LinkedIn</a>
+        <a href="https://github.com/vinod151019" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
       </div>
     </div>
   </div>
@@ -761,11 +871,11 @@
 
 <footer>
   <div class="wrap">
-    <div>© <span id="year"></span> Satya Vinod Kantipudi · Building AI on the cloud, one architecture at a time.</div>
+    <div>© <span id="year"></span> Satya Vinod Kantipudi · Turning AI capability into products that ship.</div>
     <div class="socials">
-      <a href="https://www.linkedin.com/in/svk1510/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="https://github.com/vinod151019" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="https://medium.com/@vinodkantipudi1510" target="_blank" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
+      <a href="https://www.linkedin.com/in/svk1510/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/vinod151019" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://medium.com/@vinodkantipudi1510" target="_blank" rel="noopener" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
     </div>
   </div>
 </footer>
@@ -782,11 +892,11 @@
   navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navlinks.classList.remove('open')));
 
   const roles = [
-    'build agentic AI on Amazon Bedrock & AgentCore.',
-    'ship production-grade Generative AI.',
-    'design AI/ML & RAG systems.',
-    'fine-tune & customize models on AWS.',
-    'migrate & modernize on AWS.'
+    'turn AI capabilities into products that ship.',
+    'translate customer problems into roadmaps.',
+    'drive prototype-to-production launches.',
+    'connect engineering, business & customers.',
+    'make data-driven product decisions.'
   ];
   const typed = document.querySelector('.typed');
   let ri = 0, ci = 0, deleting = false;
