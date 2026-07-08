@@ -1,37 +1,32 @@
-# Satya Vinod Kantipudi — Portfolio (2026 redesign)
+# Satya Vinod Kantipudi — Portfolio
 
-A modern, single-file portfolio reflecting my current role as an **AWS Solutions Architect** (Startups & ISVs). Dark theme, animated hero, and sections for impact, thought leadership, projects, experience, education, and writing.
+Modern single-file portfolio for my role as an **AWS Solutions Architect** specializing in **AI/ML, Generative AI, and Agentic AI**. Live at **https://vinod151019.github.io**.
 
 ## Files
-- `index.html` — the entire site (HTML + CSS + JS inline, no build step, no dependencies beyond Google Fonts + Font Awesome via CDN).
-- `SatyaVinodKantipudideiResume.pdf` — résumé linked from the hero (swap with your latest copy anytime).
+- `index.html` — the entire site (HTML + CSS + JS inline; no build step; only external deps are Google Fonts + Font Awesome via CDN).
+- `SatyaVinodKantipudideiResume.pdf` — résumé linked from the hero. **Swap this with your latest SA résumé anytime.**
+- `.nojekyll` — tells GitHub Pages to serve files as-is.
+
+## Hosting
+Served by **GitHub Pages** from the **`master`** branch (root) of `vinod151019/vinod151019.github.io`.
+- The previous (2024 data-engineer) site is preserved on the **`old-site-2024`** branch — nothing was lost.
+
+## Make an edit & republish
+```bash
+git clone https://github.com/vinod151019/vinod151019.github.io.git
+cd vinod151019.github.io
+# edit index.html (search for a section id like #impact, #focus, #education)
+git add -A
+git commit -m "Update portfolio"
+git push origin master     # Pages redeploys automatically in ~1 min
+```
 
 ## Preview locally
-Just open the file:
 ```bash
-open index.html
-```
-or serve it:
-```bash
-python3 -m http.server 8000   # then visit http://localhost:8000
+open index.html            # or: python3 -m http.server 8000
 ```
 
-## Deploy to GitHub Pages
-This replaces the old site at `vinod151019.github.io`.
-
-```bash
-# from this folder
-git init
-git add .
-git commit -m "Redesign portfolio for AWS Solutions Architect role"
-git branch -M main
-git remote add origin https://github.com/vinod151019/vinod151019.github.io.git
-git push -u origin main --force   # only if you intend to overwrite the old repo
-```
-Then enable Pages: repo → Settings → Pages → Source = `main` / root. Live within a minute or two.
-
-> Tip: keep the old repo on a branch (e.g. `git branch old-site`) before force-pushing if you want a backup.
-
-## Notes
-- All content is drawn from real engagements. **No confidential figures** (deal amounts, ARR, revenue, or account health scores) are included — engagements are described by their technical solution and outcome only.
-- To edit content, everything is plain HTML in `index.html`; search for the section `id` (e.g. `#impact`, `#leadership`) to find it.
+## Content notes
+- **No customer names** appear anywhere — engagements are described by industry and outcome only (customer identities confidential).
+- **No confidential figures** (deal amounts, ARR, revenue, account health scores) are included.
+- Certifications: 3 are listed by name + "8× AWS Certified" total. Add the remaining specific names in the `#education` section's certifications block when ready.
