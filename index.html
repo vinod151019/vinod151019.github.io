@@ -101,7 +101,7 @@
   .socials a:hover{color:var(--text);border-color:var(--orange);transform:translateY(-3px);box-shadow:0 10px 24px -12px #ff990066}
 
   .stats{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-2)}
-  .stats .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;padding:44px 24px}
+  .stats .wrap{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;padding:44px 24px}
   .stat{text-align:center}
   .stat .num{font-family:'Space Grotesk';font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;
     background:var(--grad-cool);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
@@ -299,7 +299,8 @@
 
 <div class="stats">
   <div class="wrap">
-    <div class="stat reveal"><div class="num" data-count="8" data-suffix="×">0</div><div class="lbl">AWS Certifications</div></div>
+    <div class="stat reveal"><div class="num" data-count="635" data-prefix="$" data-suffix="K+">0</div><div class="lbl">AWS revenue influenced</div></div>
+      <div class="stat reveal"><div class="num" data-count="8" data-suffix="×">0</div><div class="lbl">AWS Certifications</div></div>
     <div class="stat reveal"><div class="num" data-count="215" data-suffix="+">0</div><div class="lbl">SA engagements logged</div></div>
     <div class="stat reveal"><div class="num" data-count="40" data-suffix="+">0</div><div class="lbl">Startups &amp; ISVs supported</div></div>
     <div class="stat reveal"><div class="num" data-count="431">0</div><div class="lbl">Live workshop attendees</div></div>
@@ -426,7 +427,7 @@
         <div>
           <h3>Consumer-Electronics SaaS <span class="pill win">AWS-Native Win</span></h3>
           <div class="sub">Observability modernization</div>
-          <p>Led a CIO-level observability deep-dive and won an AWS-native stack — Amazon Managed Prometheus + Managed Grafana + CloudWatch + X-Ray — over third-party APM tools. Follow-on work added multi-region redundancy and a migration from a third-party LLM to Amazon Bedrock.</p>
+          <p>Led a CIO-level observability deep-dive and won an AWS-native stack — Amazon Managed Prometheus + Managed Grafana + CloudWatch + X-Ray — over third-party APM tools, launched into production. Follow-on work added multi-region redundancy and a migration from a third-party LLM to Amazon Bedrock.</p>
           <div class="tags"><span class="tag">AMP + AMG</span><span class="tag">CloudWatch</span><span class="tag">X-Ray</span><span class="tag">Bedrock</span></div>
         </div>
       </div>
@@ -649,6 +650,8 @@
         <div class="org">Amazon Web Services · Startups &amp; ISVs</div>
         <ul>
           <li>Trusted technical advisor to 40+ startup and ISV accounts, logging 215+ engagements across architecture reviews, demos, immersion days, and roadmap planning.</li>
+          <li>Influenced <strong style="color:var(--text)">~$635K</strong> in AWS revenue pipeline as the account Solutions Architect — including <strong style="color:var(--text)">~$268K launched into production</strong> — across the account portfolio.</li>
+          <li>Helped customers take 5+ workloads from prototype to production launch across generative AI, observability, analytics, and cost optimization.</li>
           <li>Lead AI/ML, generative-AI &amp; agentic builds on Amazon Bedrock &amp; AgentCore — RAG platforms, multi-agent systems, and model-customization pipelines.</li>
           <li>Took an agentic-AI demo (SignalScout PV) to AWS Summit London, LA &amp; NYC and moderated a 431-attendee Amazon Nova agent-building session.</li>
           <li>Co-owned the security layer of an open-source AgentCore framework and delivered SA enablement on model customization (123 fine-tuning experiments).</li>
@@ -805,11 +808,12 @@
   function animateCount(el){
     const target = +el.dataset.count;
     const suffix = el.dataset.suffix || '';
+    const prefix = el.dataset.prefix || '';
     const dur = 1600; const start = performance.now();
     function step(now){
       const p = Math.min((now - start)/dur, 1);
       const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(target * eased) + suffix;
+      el.textContent = prefix + Math.round(target * eased) + suffix;
       if(p < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
